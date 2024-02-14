@@ -119,17 +119,20 @@
                   <input class="price_input sale_price sale_price--to" type="text" placeholder="До" name="rentPriceMax">
                 </div>
                 <div class="checks-wrapper">
-                  <label class="form-switch arendator_label">
-                    <input type="checkbox" name="arendator">
-                    <i></i>
-
-                  </label>
-                  <span class="form-switch_title">Только с арендатором</span>
-                  <label class="form-switch">
-                    <input type="checkbox" name="payback">
-                    <i></i>
+                  <div class="form-switch arendator_label">
+                    <label>
+                      <input type="checkbox" name="arendator">
+                      <i></i>
+                    </label>
+                    <span class="form-switch_title">Только с арендатором</span>
+                  </div>
+                  <div class="form-switch">
+                    <label>
+                      <input type="checkbox" name="payback">
+                      <i></i>
+                    </label>
                     <span class="form-switch_title">Окупаемость до 12 лет</span>
-                  </label>
+                  </div>
                 </div>
               </div>
               <div class="filter-rent_block filter-rent_block--square">
@@ -138,11 +141,13 @@
                   <input class="price_input  sale_price" type="text" placeholder="От" name="squareMin">
                   <input class="price_input sale_price sale_price--to" type="text" placeholder="До" name="squareMax">
                 </div>
-                <label class="form-switch">
-                  <input type="checkbox" name="first-floor">
-                  <i></i>
+                <div class="form-switch">
+                  <label>
+                    <input type="checkbox" name="first-floor">
+                    <i></i>
+                  </label>
                   <span class="form-switch_title">Только 1 этаж</span>
-                </label>
+                </div>
               </div>
             </div>
           </div>
