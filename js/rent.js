@@ -1,7 +1,6 @@
 import {header} from './header.js';
-//import { getObjects } from './load-objects.js';
 import { Pagination } from './paginator.js';
-//import { createObjectList } from './createObjectList.js';
+
 const map = document.querySelector(".map_img");
 const dropdownRent = document.querySelector("#rent-dropdown");
 const inputRent = document.querySelector("#rent-input")
@@ -11,12 +10,9 @@ const bSaleMobile = document.querySelector("#bsale-mobile");
 const bSaleTitle = document.querySelector("#bsale-title");
 const bSaleInput1 = document.querySelector("#bsale-input1");
 const bSaleInput2 = document.querySelector("#bsale-input2");
-const cardList = document.querySelector('.card-list');
 
 const windowHeight = document.documentElement.clientHeight;
 map.style.height = windowHeight + 'px';
-
-//createObjectList(16, cardList);
 
 new Pagination(
   document.querySelector(".card-list"),
