@@ -8,8 +8,6 @@ function createObject(object) {
     const pictures = container.querySelectorAll(".card_picture");
     [...pictures][0].classList.add('card_picture--active');
     const card = div.firstElementChild;
-    const slider = card.querySelector('.card_wrapper');
-    sliderInit(slider, card, 5);
     card.classList.add('card--deal');
     return card;
 }
@@ -22,6 +20,8 @@ export function createObjectList(objects, cardList) {
   }
   for(let i = 0; i < objects.length; i++) {
     const card = createObject(objects[i]);
-    cardList.insertAdjacentElement('afterbegin', card);
+    cardList.append(card);
+    const slider = [...cards][i].querySelector('.card_wrapper');
+    sliderInit(slider, card, 5);
   }
 }
