@@ -1,8 +1,33 @@
-function objectsData() {
-  const count = 255;
-  const data = [];
-  for(let i=0; i < count; i++) {
-    data.push(i);
+import {RENT, SALE, BSALE} from './deals.js';
+
+function getObjectsData(deal) {
+  let count = 0;
+  let data = [];
+  switch (deal) {
+    case RENT: {
+      count = 255;
+      data = [];
+      for(let i=0; i < count; i++) {
+        data.push(i);
+      }
+      break;
+    }
+    case SALE: {
+      count = 241;
+      data = [];
+      for(let i=0; i < count; i++) {
+        data.push(i);
+      }
+      break;
+    }
+    case BSALE: {
+      count = 32;
+      data = [];
+      for(let i=0; i < count; i++) {
+        data.push(i);
+      }
+      break;
+    }
   }
   return {
     count: count,
@@ -10,8 +35,8 @@ function objectsData() {
   }
 }
 
-export function getObjects(page, pageSize) {
-  const objects = objectsData();
+export function getObjects(deal, page, pageSize) {
+  const objects = getObjectsData(deal);
   const start = page * pageSize;
   if(start < 0 || start >= objects.data.length) {
     return {

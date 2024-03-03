@@ -8,7 +8,7 @@ export class Pagination {
      * @param {Number} firstSite - which page should be displayed first, default "1"
      * @param {Number} rowsPerPage - how many rows to display per page, default "10"
      */
-    constructor(tableWrapper, paginationWrapper, firstSite = 1, rowsPerPage = 10) {
+    constructor(deal, tableWrapper, paginationWrapper, firstSite = 1, rowsPerPage = 10) {
         this.table = tableWrapper;
         this.paginationWrapper = paginationWrapper;
         this.firstSiteIndex = Number(firstSite) - 1;
@@ -16,6 +16,7 @@ export class Pagination {
         this.pageArray = [];
         this.objects = [];
         this.currentSiteNumberIndex;
+        this.deal = deal;
 
         this.startPagination();
     }
@@ -31,7 +32,7 @@ export class Pagination {
     }
 
     getPageArray() {
-        this.objects = getObjects(this.firstSiteIndex, this.rowsPerPage);
+        this.objects = getObjects(this.deal, this.firstSiteIndex, this.rowsPerPage);
         let pageArray = [];
         let site = 0;
         for (let i = 0; i < this.objects.count; i += this.rowsPerPage) {
@@ -120,10 +121,10 @@ export class Pagination {
     setSite(siteNumberIndex, objects) {
         this.currentSiteNumberIndex = Number(siteNumberIndex);
         if(objects && objects.length) {
-          createObjectList(objects, this.table);
+          createObjectList(this.deal, objects, this.table);
         } else {
-          this.objects = getObjects(this.currentSiteNumberIndex, this.pageArray[this.currentSiteNumberIndex]);
-          createObjectList(this.objects.data, this.table);
+          this.objects = getObjects(this.deal, this.currentSiteNumberIndex, this.pageArray[this.currentSiteNumberIndex]);
+          createObjectList(this.deal, this.objects.data, this.table);
         }
         this.displayPaginations();
         window.scrollTo({ top: 0, behavior: 'smooth' });
