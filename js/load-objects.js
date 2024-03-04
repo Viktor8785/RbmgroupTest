@@ -8,23 +8,23 @@ function getObjectsData(deal) {
       count = 255;
       data = [];
       for(let i=0; i < count; i++) {
-        data.push(i);
+        data.push(randomCoord());
       }
       break;
     }
     case SALE: {
-      count = 241;
+      count = 199;
       data = [];
       for(let i=0; i < count; i++) {
-        data.push(i);
+        data.push(randomCoord());
       }
       break;
     }
     case BSALE: {
-      count = 32;
+      count = 33;
       data = [];
       for(let i=0; i < count; i++) {
-        data.push(i);
+        data.push(randomCoord());
       }
       break;
     }
@@ -59,4 +59,8 @@ export function getObjects(deal, page, pageSize) {
     count: objects.count,
     data: objects.data.slice(start, end)
   }
+}
+
+function randomCoord() {
+  return {lon: 30.28 + Math.random() / 10, lat: 59.88 + Math.random() / 10};
 }

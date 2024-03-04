@@ -1,5 +1,6 @@
 import { getObjects } from "./load-objects.js";
 import { createObjectList } from "./createObjectList.js";
+import {loadMap, createMarkerList, deleteMarkerList, markerList} from './map.js';
 
 export class Pagination {
     /**
@@ -28,7 +29,7 @@ export class Pagination {
         this.paginationWrapper.classList.add('pagination-number-wrapper');
 
         this.buildPagination();
-        this.setSite(this.firstSiteIndex, this.objects.data);
+        this.setSite(this.firstSiteIndex, this.objects);
     }
 
     getPageArray() {
@@ -120,11 +121,19 @@ export class Pagination {
 
     setSite(siteNumberIndex, objects) {
         this.currentSiteNumberIndex = Number(siteNumberIndex);
-        if(objects && objects.length) {
-          createObjectList(this.deal, objects, this.table);
+        if(objects && objects.data.length) {
+          createObjectList(this.deal, objects.data, this.table);
+          if(loadMap && !markerList.length) {
+            deleteMarkerList(loadMap);
+            createMarkerList(objects.data, loadMap);
+          }
         } else {
           this.objects = getObjects(this.deal, this.currentSiteNumberIndex, this.pageArray[this.currentSiteNumberIndex]);
           createObjectList(this.deal, this.objects.data, this.table);
+          if(loadMap) {
+            deleteMarkerList(loadMap);
+            createMarkerList(this.objects.data, loadMap);
+          }
         }
         this.displayPaginations();
         window.scrollTo({ top: 0, behavior: 'smooth' });

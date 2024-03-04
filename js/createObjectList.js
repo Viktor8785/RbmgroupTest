@@ -4,6 +4,8 @@ import {cardSale} from './card-sale-template.js';
 import {cardBsale} from './card-bsale-template.js';
 import {RENT, SALE, BSALE} from './deals.js';
 
+export var objectList = [];
+
 function createObject(deal, object) {
   const div = document.createElement('div');
   switch (deal) {
@@ -34,8 +36,10 @@ export function createObjectList(deal, objects, cardList) {
     for(let i = cards.length - 1; i >= 0; i--)
     cards[i].remove();
   }
+  objectList = [];
   for(let i = 0; i < objects.length; i++) {
     const card = createObject(deal, objects[i]);
+    objectList.push(objects[i]);
     cardList.append(card);
     const slider = [...cards][i].querySelector('.card_wrapper');
     sliderInit(slider, card, 5);
