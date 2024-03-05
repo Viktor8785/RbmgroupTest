@@ -85,6 +85,3 @@ function createObjectData(deal) {
   return data;
 }
 
-function randomCoord() {
-  return {lon: 30.28 + Math.random() / 10, lat: 59.88 + Math.random() / 10};
-}

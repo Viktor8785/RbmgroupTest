@@ -2,6 +2,9 @@ import { balloonCard } from "./balloon-template.js";
 
 export var loadMap;
 export var markerList = [];
+export const CENTER = [30.349012, 59.930534];
+export const ZOOM = 13;
+let mapCurrent;
 
 export async function initMap() {
   await ymaps3.ready;
@@ -12,13 +15,14 @@ export async function initMap() {
       document.getElementById('map'),
       {
         location: {
-          center: [30.349012, 59.930534],
-          zoom: 13
+          center: CENTER,
+          zoom: ZOOM
         }
       }
   );
   map.addChild(new YMapDefaultSchemeLayer({}));
   map.addChild(new YMapDefaultFeaturesLayer({}));
+  mapCurrent = map;
   return new Promise(resolve => {
     loadMap = map;
     resolve(map);
@@ -70,4 +74,16 @@ export function deleteMarkerList(map) {
     map.removeChild(marker);
   })
   markerList = [];
+}
+
+export function setLocation(location) {
+  if(mapCurrent) {
+    mapCurrent.setLocation({location: location});
+  }
+}
+
+export function changeCenter(location) {
+  if(mapCurrent) {
+    mapCurrent.update({location: location});
+  }
 }
