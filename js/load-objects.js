@@ -8,7 +8,7 @@ function getObjectsData(deal) {
       count = 255;
       data = [];
       for(let i=0; i < count; i++) {
-        data.push(randomCoord());
+        data.push(createObjectData(deal));
       }
       break;
     }
@@ -16,7 +16,7 @@ function getObjectsData(deal) {
       count = 199;
       data = [];
       for(let i=0; i < count; i++) {
-        data.push(randomCoord());
+        data.push(createObjectData(deal));
       }
       break;
     }
@@ -24,7 +24,7 @@ function getObjectsData(deal) {
       count = 33;
       data = [];
       for(let i=0; i < count; i++) {
-        data.push(randomCoord());
+        data.push(createObjectData(deal));
       }
       break;
     }
@@ -59,6 +59,30 @@ export function getObjects(deal, page, pageSize) {
     count: objects.count,
     data: objects.data.slice(start, end)
   }
+}
+
+function createObjectData(deal) {
+  let price = '';
+  switch (deal) {
+    case RENT: {
+      price = '250 000 ₽/м';
+      break;
+    }
+    case SALE: {
+      price = '400 000 000 ₽';
+      break;
+    }
+    case BSALE: {
+      price = '1 000 000 ₽/м';
+      break;
+    }
+  }
+  const data = {
+    lon: 30.28 + Math.random() / 10,
+    lat: 59.88 + Math.random() / 10,
+    price: price
+  }
+  return data;
 }
 
 function randomCoord() {
