@@ -4,7 +4,6 @@ import {Pagination} from './paginator.js';
 import {RENT} from './deals.js';
 import {initMap, createMarkerList, deleteMarkerList, markerList} from './map.js';
 
-//const map = document.querySelector(".map_img");
 const map = document.querySelector("#map");
 const dropdownRent = document.querySelector("#rent-dropdown");
 const inputRent = document.querySelector("#rent-input")
