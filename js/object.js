@@ -1,20 +1,21 @@
 import {header} from './header.js';
-import { getObjects } from "./load-objects.js";
-import {initMap, createMarkerList, deleteMarkerList, changeCenter, CENTER, ZOOM} from './map.js';
-import {RENT, SALE, BSALE} from './deals.js';
+import {initMap, createMarkerList, deleteMarkerList, changeCenter, ZOOM} from './map.js';
 
 const photos = document.querySelectorAll(".photos_picture");
 const objectPhotos = document.querySelectorAll(".object-sale_picture");
+const data = {
+  lon: 30.349012,
+  lat: 59.930534,
+};
 
 initMap().then(map => {
-  const object = getObjects(RENT, 1, 1);
   const location = {
-    center: [object.data[0].lon, object.data[0].lat],
+    center: [data.lon, data.lat],
     zoom: ZOOM
   }
   changeCenter(location);
   deleteMarkerList(map);
-  createMarkerList(object.data, map);
+  createMarkerList([data], map);
 });
 
 photos.forEach((photo, index) => {

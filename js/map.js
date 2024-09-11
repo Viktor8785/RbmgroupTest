@@ -1,4 +1,4 @@
-import { balloonCard } from "./balloon-template.js";
+const elementTemplateMarker = document.querySelector('#marker-template').content;
 
 export var loadMap;
 export var markerList = [];
@@ -32,11 +32,10 @@ export async function initMap() {
 function createMarker(object) {
   let markerCurrent = null;
   const {YMapMarker} = ymaps3;
+  const template = elementTemplateMarker.cloneNode(true);
   const markerElement = document.createElement('div');
-  markerElement.classList.add('marker');
-  markerElement.innerText = object.price;
-  const balloonElement = createBalloon(object);
-  markerElement.appendChild(balloonElement);
+  markerElement.appendChild(template);
+  const balloonElement = markerElement.querySelector('.balloon');
   markerElement.addEventListener('click', () => {
     balloonElement.classList.add('balloon--open');
     markerElement.parentElement.style.zIndex = 1;
@@ -49,16 +48,12 @@ function createMarker(object) {
       balloonElement.classList.remove('balloon--open');
     }
   })
-  const marker = new YMapMarker({coordinates: [object.lon, object.lat]}, markerElement);
+  const data = {
+    lon: 30.28 + Math.random() / 10,
+    lat: 59.88 + Math.random() / 10,
+  }
+  const marker = new YMapMarker({coordinates: [data.lon, data.lat]}, markerElement);
   return marker;
-}
-
-function createBalloon(object) {
-  const balloonElement = document.createElement('div');
-  balloonElement.classList.add('balloon');
-  balloonElement.innerHTML = balloonCard;
-  balloonElement.querySelector('.ballon-price').innerText = object.price;
-  return balloonElement;
 }
 
 export function createMarkerList(objects, map) {

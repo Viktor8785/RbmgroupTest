@@ -1,8 +1,11 @@
 import {header} from './header.js';
-import {objectList} from './createObjectList.js';
-import {Pagination} from './paginator.js';
-import {RENT} from './deals.js';
+import {sliderInit} from './slider.js'
 import {initMap, createMarkerList, deleteMarkerList, markerList} from './map.js';
+
+const cardList = document.querySelector('.card-list');
+const cards = cardList.children;
+const buttonWrapper = document.querySelector('.pagination-site-number-wrapper');
+const buttons = buttonWrapper.querySelectorAll('button');
 
 const map = document.querySelector("#map");
 const dropdownRent = document.querySelector("#rent-dropdown");
@@ -15,21 +18,33 @@ const bSaleInput1 = document.querySelector("#bsale-input1");
 const bSaleInput2 = document.querySelector("#bsale-input2");
 
 const windowHeight = document.documentElement.clientHeight;
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    buttons.forEach(item => {
+      if(item.classList.contains('active')) {
+        item.classList.remove('active');
+      }
+    })
+    button.classList.add('active');
+  });
+});
+
 map.style.height = windowHeight + 'px';
-const startPage = 1;
-const pageSize = 12;
 let loadMap = false;
 
+[...cards].forEach(card => {
+  const slider = card.querySelector('.card_wrapper');
+  sliderInit(slider, card, 5);
+});
 
 initMap().then(map => {
   loadMap = true;
-  if(objectList.length && !markerList.length) {
+  if([...cards].length && !markerList.length) {
     deleteMarkerList(map);
-    createMarkerList(objectList, map);
+    createMarkerList([...cards], map);
   }
 });
-
-new Pagination(RENT, document.querySelector(".card-list"), document.querySelector(".pagination-wrapper"), startPage, pageSize);
 
 options.forEach(option => {
   option.addEventListener('click', (ev) => {
