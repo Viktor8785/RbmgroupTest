@@ -1,4 +1,5 @@
 import {header} from './header.js';
+import {footer} from './footer.js';
 import {sliderInit} from './slider.js'
 
 const cardList = document.querySelector('.card-list');
@@ -10,3 +11,4 @@ const cards = cardList.children;
 })
 
 header();
+footer();

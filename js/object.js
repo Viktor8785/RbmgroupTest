@@ -1,8 +1,10 @@
 import {header} from './header.js';
+import {footer} from './footer.js';
 import {initMap, createMarkerList, deleteMarkerList, changeCenter, ZOOM} from './map.js';
 
 const photos = document.querySelectorAll(".photos_picture");
 const objectPhotos = document.querySelectorAll(".object-sale_picture");
+const formRecall = document.querySelector(".object-sale_recall");
 const data = {
   lon: 30.349012,
   lat: 59.930534,
@@ -29,4 +31,9 @@ photos.forEach((photo, index) => {
   });
 });
 
+formRecall.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+});
+
 header();
+footer();

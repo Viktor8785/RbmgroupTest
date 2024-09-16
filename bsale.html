@@ -13,21 +13,54 @@
   <body class="page__body">
     <div class="page_body-wrapper">
       <section class="header">
-        <nav class="header_nav" id="header-nav">
-          <img class="header_menu" src="img/icons/menu.svg" id="header-menu" alt="">
-          <a href="index.html">
-            <img class="header_logo" src="img/logo.png" id="header-logo" alt="Логотип RBM GROUP">
-          </a>
-          <img class="header_close" src="img/icons/exit.svg" id="header-close" alt="">
-          <div class="header_nav-wrapper" id="header-nav-wrapper">
-            <a class="header_nav-item" href="rent.html">Аренда</a>
-            <a class="header_nav-item" href="sale.html">Покупка (инвестиции)</a>
-            <a class="header_nav-item header_nav-item--active">Готовый бизнес</a>
-          </div>
-        </nav>
+        <div class="header-wrapper">
+          <nav class="header_nav" id="header-nav">
+            <img class="header_menu" src="img/icons/menu.svg" id="header-menu" alt="">
+            <a href="index.html">
+              <img class="header_logo" src="img/logo.png" id="header-logo" alt="Логотип RBM GROUP">
+            </a>
+            <img class="header_search" src="img/icons/search.svg" id="header-search" alt="">
+            <img class="header_search-blue" src="img/icons/search-blue.svg" id="header-search-blue" alt="">
+            <img class="header_heart-red" src="img/icons/heart-red.svg" id="header-heart-red" alt="">
+            <img class="header_heart" src="img/icons/heart-empty.svg" id="header-heart" alt="">
+            <img class="header_close" src="img/icons/exit.svg" id="header-close" alt="">
+            <div class="header_nav-wrapper" id="header-nav-wrapper">
+              <form class="header_form" id="header-form">
+                <input type="text" id="header-input" class="header_input" name="search" placeholder="Введите № объекта или улицу">
+              </form>
+              <div class="item-wrapper">
+                <a class="header_nav-item" href="rent.html">Аренда</a>
+                <a class="header_nav-item" href="sale.html">Покупка (инвестиции)</a>
+                <a class="header_nav-item header_nav-item--active">Готовый бизнес</a>
+              </div>
+              <div class="header_nav-phone">
+                <a href="tel:+78129324747" id="header-phone"  class="footer_logo-phone">+7(812)932-47-47</a>
+                <a href="#recall" id="header-recall" class="footer_logo-title footer_logo-title--recall">Заказать звонок</a>
+              </div>
+              <div class="header_nav-social">
+                <a  class="footer_social-tg">
+                  <img src="img/icons/tg.svg" class="tg_img" alt="Телеграмм">
+                </a>
+                <a href="https://vk.com/rbmgroup" class="footer_social-vk">
+                  <img src="img/icons/vk.svg" class="vk_img" alt="ВКонтакте">
+                </a>
+                <a  class="footer_social-wa">
+                  <img src="img/icons/wa.svg" class="wa_img" alt="WhatsApp">
+                </a>
+              </div>
+              <img class="header_heart-blue" src="img/icons/heart-blue.svg" alt="">
+              <img class="header_heart-blue-red" src="img/icons/heart-blue-red.svg" alt="">
+            </div>
+          </nav>
+        </div>
+        <div class="header_search-wrapper" id="header-search-wrapper">
+          <form class="header_form" id="header-form-desc">
+            <input type="text" id="header-input" class="header_input" name="search" placeholder="Введите № объекта или улицу">
+          </form>
+        </div>
       </section>
       <section class="filter-rent">
-        <form class="filter-rent_form">
+        <form class="filter-rent_form" id="filter-bsale">
           <h1 class="filter-bsale_title">Купить готовый бизнес<br class="filter-rent_br"> в Санкт-Петербурге</h1>
            <div class="filter-rent_filter">
             <div class="filter-bsale_filter-wrapper">
@@ -87,7 +120,7 @@
                 <p class="block_title">Бюджет, ₽</p>
                 <div class="price_wrapper">
                   <input class="price_input bsale-budget_price" type="text" placeholder="От" id="bsale-price-min" name="bsalePriceMin">
-                  <input class="price_input bsale-budget_price bsale-budget_price--to" type="text" placeholder="До" name="bsalePriceMax">
+                  <input class="price_input bsale-budget_price bsale-budget_price--to" type="text" placeholder="До" id="bsale-price-max" name="bsalePriceMax">
                 </div>
                 <div class="type-bsale_wrapper">
                   <label for="budget1" class="type_label">
@@ -132,7 +165,7 @@
               </div>
               <div class="filter-rent_block filter-rent_block--profit">
                 <p class="block_title">Прибыль от, ₽</p>
-                <input class="location_input location_input--profit" type="text" placeholder="0" name="profit">
+                <input class="location_input location_input--profit" type="text" placeholder="0" name="profit" id="profit">
               </div>
             </div>
           </div>
@@ -148,6 +181,7 @@
             <a class="card card--deal"  href="object-bsale.html">
               <div class="card_wrapper">
                 <div class="card_slider">
+                  <img class="card_back card_back--slider" src="img/sale/object4-desktop.jpg" alt="Ресторан">
                   <div class="slider_container">
                     <picture class="card_picture card_picture--active">
                       <img class="card_back" src="img/sale/object1-desktop.jpg" alt="Ресторан">
@@ -278,6 +312,7 @@
             <a class="card card--deal"  href="object-bsale.html">
               <div class="card_wrapper">
                 <div class="card_slider">
+                  <img class="card_back card_back--slider" src="img/sale/object4-desktop.jpg" alt="Ресторан">
                   <div class="slider_container">
                     <picture class="card_picture card_picture--active">
                       <img class="card_back" src="img/sale/object1-desktop.jpg" alt="Ресторан">
@@ -416,7 +451,7 @@
             <button class="next-button">></button>
           </div>
           <div class="rent_recall">
-            <div class="recall_title-wrapper">
+            <div id="recall" class="recall_title-wrapper">
               <p class="recall_title">Предложения по вашему запросу<br class="recall_br"> закончились</p>
               <p class="recall_subtitle">Оставьте номер телефона и мы подберем для вас другие<br class="recall_br"> предложения</p>
             </div>
@@ -426,6 +461,60 @@
         <div class="rent_catalog-map" id="map">
         </div>
       </section>
+      <footer class="footer">
+        <div class="footer_container">
+          <div class="footer_wrapper">
+            <div class="footer_logo">
+              <a href="index.html">
+                <img class="header_logo header_logo--footer" src="img/logo.png" id="header-logo" alt="Логотип RBM GROUP">
+              </a>
+              <p class="footer_logo-title">г. Санкт-Петербург, Греческий пр, 29</p>
+              <a href="tel:+78129324747" class="footer_logo-phone">+7(812)932-47-47</a>
+              <a href="#recall" class="footer_logo-title footer_logo-title--recall">Заказать звонок</a>
+            </div>
+            <ul class="footer_links">
+              <li class="footer-link">
+                Аренда помещения под ресторан в Санкт-Петербурге
+              </li>
+              <li class="footer-link">
+                Аренда под салон красоты в Санкт-Петербурге
+              </li>
+              <li class="footer-link">
+                Аренда помещения под медицинский центр в Санкт-Петербурге
+              </li>
+              <li class="footer-link">
+                Аренда под магазин в Санкт-Петербурге
+              </li>
+              <li class="footer-link">
+                Покупка коммерческой недвижимости в Санкт-Петербурге
+              </li>
+              <li class="footer-link">
+                Купить готовый бизнес в Санкт-Петербурге
+              </li>
+            </ul>
+            <div class="footer_subscribe-wrapper">
+              <form class="footer_subscribe" id="footer-subscribe">
+                <input type="text" class="footer_subscribe-input" placeholder="Email">
+                <button type="submit" class="footer_subscribe-button">Подписаться</button>
+              </form>
+              <p class="footer_subscribe-title">Подпишитесь на нашу рассылку и получайте первым<br class="footer_subscribe-br"> самые лучшие объекты</p>
+            </div>
+            <div class="footer_social">
+              <a  class="footer_social-tg">
+                <img src="img/icons/tg.svg" class="tg_img" alt="Телеграмм">
+              </a>
+              <a href="https://vk.com/rbmgroup" class="footer_social-vk">
+                <img src="img/icons/vk.svg" class="vk_img" alt="ВКонтакте">
+              </a>
+              <a  class="footer_social-wa">
+                <img src="img/icons/wa.svg" class="wa_img" alt="WhatsApp">
+              </a>
+            </div>
+          </div>
+          <div class="footer_line"></div>
+          <p class="footer_copy">© RBM 2023</p>
+        </div>
+      </footer>
     </div>
 
     <!-- Маркер на карту-->

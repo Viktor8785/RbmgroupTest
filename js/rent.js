@@ -1,10 +1,12 @@
 import {header} from './header.js';
+import {footer} from './footer.js';
 import {sliderInit} from './slider.js'
 import {initMap, createMarkerList, deleteMarkerList, markerList} from './map.js';
 
 const cardList = document.querySelector('.card-list');
 const cards = cardList.children;
 const buttonWrapper = document.querySelector('.pagination-site-number-wrapper');
+const filterRent = document.querySelector('#filter-rent');
 const buttons = buttonWrapper.querySelectorAll('button');
 
 const map = document.querySelector("#map");
@@ -14,10 +16,76 @@ const options = document.querySelectorAll(".options_item")
 const bSale = document.querySelector("#bsale");
 const bSaleMobile = document.querySelector("#bsale-mobile");
 const bSaleTitle = document.querySelector("#bsale-title");
-const bSaleInput1 = document.querySelector("#bsale-input1");
-const bSaleInput2 = document.querySelector("#bsale-input2");
+const priceBSale = document.querySelector("#price-bsale");
+const priceBSaleMax = document.querySelector("#price-bsale-max");
+const priceRent = document.querySelector("#price-rent");
+const priceRentMax = document.querySelector("#price-rent-max");
+const squareMin = document.querySelector('#square-min');
+const squareMax = document.querySelector('#square-max');
 
 const windowHeight = document.documentElement.clientHeight;
+
+priceRentMax.addEventListener('keypress', (evt) => {
+  if (evt.which < 48 || evt.which > 57) {
+      evt.preventDefault();
+  }
+});
+
+priceRentMax.addEventListener('input', (evt) => {
+  evt.target.value = evt.target.value.replace(/[^0-9]/g, '');
+  evt.target.value = evt.target.value.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+});
+
+
+priceRent.addEventListener('keypress', (evt) => {
+  if (evt.which < 48 || evt.which > 57) {
+      evt.preventDefault();
+  }
+});
+
+priceRent.addEventListener('input', (evt) => {
+  evt.target.value = evt.target.value.replace(/[^0-9]/g, '');
+  evt.target.value = evt.target.value.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+});
+
+squareMin.addEventListener('keypress', (evt) => {
+  if ((evt.which < 48 || evt.which > 57) && String.fromCharCode(evt.which) !== ',') {
+      evt.preventDefault();
+  }
+});
+
+squareMax.addEventListener('keypress', (evt) => {
+  if ((evt.which < 48 || evt.which > 57) && String.fromCharCode(evt.which) !== ',') {
+      evt.preventDefault();
+  }
+});
+
+priceBSaleMax.addEventListener('keypress', (evt) => {
+  if (evt.which < 48 || evt.which > 57) {
+      evt.preventDefault();
+  }
+});
+
+priceBSaleMax.addEventListener('input', (evt) => {
+  evt.target.value = evt.target.value.replace(/[^0-9]/g, '');
+  evt.target.value = evt.target.value.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+});
+
+
+priceBSale.addEventListener('keypress', (evt) => {
+  if (evt.which < 48 || evt.which > 57) {
+      evt.preventDefault();
+  }
+});
+
+priceBSale.addEventListener('input', (evt) => {
+  evt.target.value = evt.target.value.replace(/[^0-9]/g, '');
+  evt.target.value = evt.target.value.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+});
+
+filterRent.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+});
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
@@ -59,28 +127,28 @@ dropdownRent.onclick = function() {
 bSale.addEventListener('click', (ev) => {
   if (!bSale.checked) {
     bSaleTitle.classList.add('business-sale_disabled');
-    bSaleInput1.disabled = true;
-    bSaleInput2.disabled = true;
-    bSaleInput1.value = '';
-    bSaleInput2.value = '';
+    priceBSale.disabled = true;
+    priceBSaleMax.disabled = true;
+    priceBSale.value = '';
+    priceBSaleMax.value = '';
   } else {
     bSaleTitle.classList.remove('business-sale_disabled');
-    bSaleInput1.disabled = false;
-    bSaleInput2.disabled = false;
+    priceBSale.disabled = false;
+    priceBSaleMax.disabled = false;
   }
 });
 
 bSaleMobile.addEventListener('click', (ev) => {
   if (!bSaleMobile.checked) {
     bSaleTitle.classList.add('business-sale_disabled');
-    bSaleInput1.disabled = true;
-    bSaleInput2.disabled = true;
-    bSaleInput1.value = '';
-    bSaleInput2.value = '';
+    priceBSale.disabled = true;
+    priceBSaleMax.disabled = true;
+    priceBSale.value = '';
+    priceBSaleMax.value = '';
   } else {
     bSaleTitle.classList.remove('business-sale_disabled');
-    bSaleInput1.disabled = false;
-    bSaleInput2.disabled = false;
+    priceBSale.disabled = false;
+    priceBSaleMax.disabled = false;
   }
 });
 
@@ -97,3 +165,4 @@ window.addEventListener('touchstart', (ev) => {
 });
 
 header();
+footer();

@@ -2,7 +2,16 @@ const headerNav = document.querySelector("#header-nav");
 const headerNavWrapper = document.querySelector("#header-nav-wrapper");
 const headerMenu = document.querySelector("#header-menu");
 const headerLogo = document.querySelector("#header-logo");
+const headerSearch = document.querySelector("#header-search");
+const headerSearchBlue = document.querySelector("#header-search-blue");
+const headerHeart = document.querySelector("#header-heart");
+const headerHeartRed = document.querySelector("#header-heart-red");
 const headerClose = document.querySelector("#header-close");
+const headerSearchWrapper = document.querySelector("#header-search-wrapper");
+const headerPhone = document.querySelector("#header-phone");
+const headerRecall = document.querySelector("#header-recall");
+const headerForm = document.querySelector("#header-form");
+const headerFormDesc = document.querySelector("#header-form-desc");
 const mediaQueryDesktopSmall = window.matchMedia('(min-width: 1440px)');
 
 mediaQueryDesktopSmall.addEventListener('change', handleWidthChangeDesktopSmall);
@@ -12,26 +21,79 @@ function handleWidthChangeDesktopSmall(e) {
     headerMenu.classList.remove("header_menu--opened");
     headerNav.classList.remove("header_nav--opened");
     headerNavWrapper.classList.remove("header_nav-wrapper--opened");
+    // headerSearch.classList.remove("header_search--opened");
+    // headerSearchBlue.classList.remove("header_search-blue--opened");
+    // headerHeart.classList.remove("header_heart--opened");
+    // headerHeartRed.classList.remove("header_heart-red--opened");
     headerLogo.classList.remove("header_logo--opened");
     headerClose.classList.remove("header_close--opened");
+    headerSearchWrapper.classList.remove("header_search-wrapper--opened");
   }
 };
 
 export function header() {
+  headerForm.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+  });
+
+  headerFormDesc.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+  });
+
   headerMenu.addEventListener('click', (ev) => {
     headerMenu.classList.add("header_menu--opened");
     headerNav.classList.add("header_nav--opened");
     headerNavWrapper.classList.add("header_nav-wrapper--opened");
+    headerSearch.classList.add("header_search--opened");
+    headerSearchBlue.classList.add("header_search-blue--opened");
+    headerSearchBlue.classList.remove("header_search-blue--active");
+    headerHeart.classList.add("header_heart--opened");
+    headerHeartRed.classList.add("header_heart-red--opened");
     headerLogo.classList.add("header_logo--opened");
     headerClose.classList.add("header_close--opened");
+    if(headerSearchWrapper.classList.contains("header_search-wrapper--opened")) {
+      headerSearchWrapper.classList.remove("header_search-wrapper--opened");
+    }
   });
 
   headerClose.addEventListener('click', (ev) => {
-    headerMenu.classList.remove("header_menu--opened");
-    headerNav.classList.remove("header_nav--opened");
-    headerNavWrapper.classList.remove("header_nav-wrapper--opened");
-    headerLogo.classList.remove("header_logo--opened");
-    headerClose.classList.remove("header_close--opened");
+    headerMenuClose();
   });
+
+  headerPhone.addEventListener('click', (ev) => {
+    if(headerMenu.classList.contains("header_menu--opened")) {
+      headerMenuClose();
+    }
+  });
+
+  headerRecall.addEventListener('click', (ev) => {
+    if(headerMenu.classList.contains("header_menu--opened")) {
+      headerMenuClose();
+    }
+  });
+
+  headerSearch.addEventListener('click', (ev) => {
+    headerSearchWrapper.classList.toggle("header_search-wrapper--opened");
+    headerSearch.classList.toggle("header_search--active");
+    headerSearchBlue.classList.toggle("header_search-blue--active");
+  });
+
+  headerSearchBlue.addEventListener('click', (ev) => {
+    headerSearchWrapper.classList.toggle("header_search-wrapper--opened");
+    headerSearch.classList.toggle("header_search--active");
+    headerSearchBlue.classList.toggle("header_search-blue--active");
+  });
+
+  function headerMenuClose() {
+    headerMenu.classList.remove("header_menu--opened");
+      headerNav.classList.remove("header_nav--opened");
+      headerNavWrapper.classList.remove("header_nav-wrapper--opened");
+      headerSearch.classList.remove("header_search--opened");
+      headerSearch.classList.remove("header_search--active");
+      headerSearchBlue.classList.remove("header_search-blue--opened");
+      headerHeart.classList.remove("header_heart--opened");
+      headerLogo.classList.remove("header_logo--opened");
+      headerClose.classList.remove("header_close--opened");
+  }
 }
 
