@@ -11,6 +11,7 @@ const priceSale = document.querySelector('#price-sale');
 const priceSaleMax = document.querySelector('#price-sale-max');
 const squareMin = document.querySelector('#square-min');
 const squareMax = document.querySelector('#square-max');
+const actual = document.querySelector('#actual-sale');
 const buttons = buttonWrapper.querySelectorAll('button');
 
 const map = document.querySelector("#map");
@@ -21,6 +22,8 @@ const options = document.querySelectorAll(".options_item")
 const windowHeight = document.documentElement.clientHeight;
 map.style.height = windowHeight + 'px';
 let loadMap = false;
+
+actual.checked = true;
 
 filterSale.addEventListener('submit', (evt) => {
   evt.preventDefault();

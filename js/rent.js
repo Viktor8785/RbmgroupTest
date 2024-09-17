@@ -22,8 +22,11 @@ const priceRent = document.querySelector("#price-rent");
 const priceRentMax = document.querySelector("#price-rent-max");
 const squareMin = document.querySelector('#square-min');
 const squareMax = document.querySelector('#square-max');
+const actual = document.querySelector('#actual');
 
 const windowHeight = document.documentElement.clientHeight;
+
+actual.checked = true;
 
 priceRentMax.addEventListener('keypress', (evt) => {
   if (evt.which < 48 || evt.which > 57) {
