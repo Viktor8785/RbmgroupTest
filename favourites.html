@@ -21,16 +21,14 @@
             </a>
             <img class="header_search" src="img/icons/search.svg" id="header-search" alt="">
             <img class="header_search-blue" src="img/icons/search-blue.svg" id="header-search-blue" alt="">
-            <a class="header_heart-link_mobile" href="favourites.html" id="header-heart">
-              <img class="header_heart" src="img/icons/heart-empty.svg" alt="">
-            </a>
+            <img class="header_heart-red" src="img/icons/heart-red.svg" id="header-heart-red" alt="">
             <img class="header_close" src="img/icons/exit.svg" id="header-close" alt="">
             <div class="header_nav-wrapper" id="header-nav-wrapper">
               <form class="header_form" id="header-form">
                 <input type="text" id="header-input" class="header_input" name="search" placeholder="Введите № объекта или улицу">
               </form>
               <div class="item-wrapper">
-                <a class="header_nav-item header_nav-item--active">Аренда</a>
+                <a class="header_nav-item" href="rent.html">Аренда</a>
                 <a class="header_nav-item" href="sale.html">Покупка (инвестиции)</a>
                 <a class="header_nav-item" href="bsale.html">Готовый бизнес</a>
               </div>
@@ -49,9 +47,7 @@
                   <img src="img/icons/wa.svg" class="wa_img" alt="WhatsApp">
                 </a>
               </div>
-              <a class="header_heart-link" href="favourites.html">
-                <img class="header_heart-blue" src="img/icons/heart-blue.svg" alt="">
-              </a>
+              <img class="header_heart-blue-red" src="img/icons/heart-blue-red.svg" alt="">
             </div>
           </nav>
         </div>
@@ -61,157 +57,14 @@
           </form>
         </div>
       </section>
-      <section class="filter-rent">
-        <form class="filter-rent_form" id="filter-rent">
-          <div class="filter-rent_objects">
-            <h1 class="filter-rent_title">Аренда коммерческой недвижимости<br class="filter-rent_br"> в Санкт-Петербурге</h1>
-            <div class="filter-rent_checks">
-              <label for="actual" class="objects_label">
-                <input type="checkbox" class="visually-hidden input-actual" id="actual" name="actual" checked="checked">
-                <img class="check-icon input-actual__empty" src="img/icons/check-empty.svg" alt="">
-                <img class="check-icon input-actual__filled check-icon" src="img/icons/check-filled.svg" alt="">
-                <p class="input_title">Актуальные объекты</p>
-              </label>
-              <label for="occupied" class="objects_label">
-                <input type="checkbox" class="visually-hidden input-occupied" id="occupied" name="occupied">
-                <img class="check-icon input-occupied__empty" src="img/icons/check-empty.svg" alt="">
-                <img class="check-icon input-occupied__filled" src="img/icons/check-filled.svg" alt="">
-                <p class="input_title">Объекты уже заняты</p>
-              </label>
-            </div>
-          </div>
-          <div class="filter-rent_filter">
-            <div class="filter-rent_filter-wrapper">
-              <div class="filter-rent_block filter-rent_block--rent">
-                <p class="block_title">Что ищем?</p>
-                <div class="filter-rent_checks--mobile">
-                  <label for="actual-mobile" class="objects_label">
-                    <input type="checkbox" class="visually-hidden input-actual" id="actual-mobile" name="actual" checked="checked">
-                    <img class="check-icon input-actual__empty" src="img/icons/check-empty.svg" alt="">
-                    <img class="check-icon input-actual__filled" src="img/icons/check-filled.svg" alt="">
-                    <p class="input_title">Актуальные объекты</p>
-                  </label>
-                  <label for="occupied-mobile" class="objects_label">
-                    <input type="checkbox" class="visually-hidden input-occupied" id="occupied-mobile" name="occupied">
-                    <img class="check-icon input-occupied__empty" src="img/icons/check-empty.svg" alt="">
-                    <img class="check-icon input-occupied__filled" src="img/icons/check-filled.svg" alt="">
-                    <p class="input_title">Объекты уже заняты</p>
-                  </label>
-                </div>
-                <div class="type_wrapper">
-                  <label for="all-rent" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_rent" id="all-rent" name="allRent">
-                    <div class="type_category">Все объекты</div>
-                  </label>
-                  <label for="сommercial-rent" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_rent" id="сommercial-rent" name="сommercialRent">
-                    <div class="type_category">Торговое</div>
-                  </label>
-                  <label for="ofice-rent" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_rent" id="ofice-rent" name="oficeRent">
-                    <div class="type_category">Офисы</div>
-                  </label>
-                  <label for="hotel-rent" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_rent" id="hotel-rent" name="hotelRent">
-                    <div class="type_category">Отели</div>
-                  </label>
-                  <label for="autoservice-rent" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_rent" id="autoservice-rent" name="autoserviceRent">
-                    <div class="type_category">Автосервис, мойка</div>
-                  </label>
-                </div>
-                <div class="type_wrapper">
-                  <label for="spa-rent" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_rent" id="spa-rent" name="spaRent">
-                    <div class="type_category">Сауна, SPA</div>
-                  </label>
-                  <label for="catering-rent" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_rent" id="catering-rent" name="cateringRent">
-                    <div class="type_category">Общепит</div>
-                  </label>
-                  <label for="warehouse-rent" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_rent" id="warehouse-rent" name="warehouseRent">
-                    <div class="type_category">Склады</div>
-                  </label>
-                  <label for="medical-rent" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_rent" id="medical-rent" name="medicalRent">
-                    <div class="type_category">Мед. центр</div>
-                  </label>
-                  <div class="type-dropdown" id="rent-dropdown">
-                    <input class="type-dropdown_input" id="rent-input" type="text" value="Другое" name="other" readonly>
-                    <div class="type-dropdown_options">
-                      <div class="options_item">Другое</div>
-                      <div class="options_item">Ларек</div>
-                      <div class="options_item">Стадион</div>
-                      <div class="options_item">Парковка</div>
-                    </div>
-                </div>
-                </div>
-              </div>
-              <div class="filter-rent_block filter-rent_block--square rent-order">
-                <p class="block_title">Цена аренды, ₽</p>
-                <div class="price_wrapper">
-                  <input class="price_input price_input--price" type="text" placeholder="От" name="rentPriceMin" id="price-rent">
-                  <input class="price_input price_input--to price_input--price" type="text" placeholder="До" name="rentPriceMax" id="price-rent-max">
-                </div>
-                <label for="bsale" class="business-sale_label">
-                  <input type="checkbox" class="visually-hidden business-sale_input" id="bsale" name="businessSale">
-                  <img class="check-icon business-sale__empty" src="img/icons/check-empty.svg" alt="">
-                  <img class="check-icon business-sale__filled" src="img/icons/check-filled.svg" alt="">
-                  <p class="business-sale_title">Рассмотрю покупку бизнеса</p>
-                </label>
-                <div class="form-switch form-switch--mobile">
-                  <label>
-                    <input type="checkbox" id="bsale-mobile" name="businessSale">
-                    <i></i>
-                  </label>
-                  <span class="form-switch_title">Рассмотрю покупку бизнеса</span>
-                </div>
-              </div>
-              <div class="filter-rent_block filter-rent_block--square square-order">
-                <p class="block_title">Площадь, м<sup class="block_sup">2</sup></p>
-                <div class="price_wrapper">
-                  <input class="price_input price_input--square" type="text" placeholder="От" name="squareMin" id="square-min">
-                  <input class="price_input price_input--to price_input--square" type="text" placeholder="До" name="squareMax" id="square-max">
-                </div>
-                <div class="form-switch ">
-                  <label>
-                    <input type="checkbox" name="first-floor" id="first-floor">
-                    <i></i>
-                  </label>
-                  <span class="form-switch_title">Только 1 этаж</span>
-                </div>
-              </div>
-              <div class="filter-rent_block filter-rent_block--location location-order">
-                <p class="block_title">Локация</p>
-                <input class="location_input" type="text" placeholder="Выберите или введите улицу" name="location" id="location">
-                <div class="form-switch ">
-                  <label>
-                    <input type="checkbox" name="night-noize" id="night-noize">
-                    <i></i>
-                  </label>
-                  <span class="form-switch_title">Разрешен шум ночью</span>
-                </div>
-              </div>
-              <div class="filter-rent_block filter-rent_block--bsale business-sale_order">
-                <p class="block_title business-sale_disabled" id="bsale-title">Цена покупки бизнеса, ₽</p>
-                <div class="price_wrapper">
-                  <input class="price_input price_input--bsale" type="text" placeholder="От" name="businessSalePriceMin" id="price-bsale" disabled>
-                  <input class="price_input price_input--to price_input--bsale" type="text" placeholder="До" name="businessSalePriceMax" id="price-bsale-max" disabled>
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
-      </section>
-      <div class="show-map">
-        Показать на карте
-      </div>
-      <section class="rent_catalog">
+      <section class="catalog">
+        <div class="rent_title">
+          <h1 class="filter-rent_title">Избранные объекты</h1>
+        </div>
         <div>
-          <ul class="card-list card-list--deal">
+          <ul class="card-list">
             <!-- Карточка объекта 1 -->
-            <a class="card card--deal" href="object-rent.html">
+            <a class="card" href="object-rent.html">
               <div class="card_wrapper">
                 <div class="card_slider">
                   <img class="card_back card_back--slider" src="img/sale/object4-desktop.jpg" alt="Ресторан">
@@ -333,7 +186,7 @@
               </div>
             </a>
             <!-- Карточка объекта 2 -->
-            <a class="card card--deal" href="object-rent.html">
+            <a class="card" href="object-sale.html">
               <div class="card_wrapper">
                 <div class="card_slider">
                   <img class="card_back card_back--slider" src="img/sale/object4-desktop.jpg" alt="Ресторан">
@@ -410,7 +263,7 @@
                     <div class="sector"></div>
                   </div>
                 </div>
-                <h2 class="card-title">Аренда помещения под ресторан на<br> улице большой Сампсоновской 19</h2>
+                <h2 class="card-title">Продажа помещения с арендатором и<br> окупаемостью за 145 месяцев</h2>
                 <p class="card_subtitle">Большой Сампсониевский пр-т  19</p>
                 <div class="card_features-wrapper">
                   <div class="features_object">
@@ -444,18 +297,18 @@
                 </div>
                 <div class="card_finance-wrapper">
                   <div class="finance_item">
-                    <p class="finance_item-title1">Общепит</p>
-                    <p class="finance_item_subtitle">последний арендатор</p>
+                    <p class="finance_item-title1">9,5% / 145 мес</p>
+                    <p class="finance_item_subtitle">доходность / окупаемость</p>
                   </div>
                   <div class="finance_item">
-                    <p class="finance_item-title2">250 000 ₽/мес</p>
+                    <p class="finance_item-title2">444 000 000 ₽</p>
                     <p class="finance_item_subtitle">100 000 ₽/м2</p>
                   </div>
                 </div>
               </div>
             </a>
             <!-- Карточка объекта 3 -->
-            <a class="card card--deal" href="object-rent.html">
+            <a class="card" href="object-sale.html">
               <div class="card_wrapper">
                 <div class="card_slider">
                   <img class="card_back card_back--slider" src="img/sale/object4-desktop.jpg" alt="Ресторан">
@@ -532,6 +385,137 @@
                     <div class="sector"></div>
                   </div>
                 </div>
+                <h2 class="card-title">Продажа помещения с арендатором и<br> окупаемостью за 145 месяцев</h2>
+                <p class="card_subtitle">Большой Сампсониевский пр-т  19</p>
+                <div class="card_features-wrapper">
+                  <div class="features_object">
+                    <div class="feature_item">
+                      <img class="feature_item-icon" src="img/icons/maximize.svg" alt="">
+                      <p class="feature_item-title">120 м<sup>2</sup></p>
+                    </div>
+                    <div class="feature_item">
+                      <img class="feature_item-icon" src="img/icons/arrow-up.svg" alt="">
+                      <p class="feature_item-title">1 этаж</p>
+                    </div>
+                    <div class="feature_item">
+                      <img class="feature_item-icon" src="img/icons/map.svg" alt="">
+                      <p class="feature_item-title">Спальный район</p>
+                    </div>
+                  </div>
+                  <div class="features_object feature_feature">
+                    <div class="feature_item">
+                      <img class="feature_item-icon" src="img/icons/terras.svg" alt="">
+                      <p class="feature_item-title">Терраса</p>
+                    </div>
+                    <div class="feature_item">
+                      <img class="feature_item-icon" src="img/icons/wind.svg" alt="">
+                      <p class="feature_item-title">Вытяжка</p>
+                    </div>
+                    <div class="feature_item">
+                      <img class="feature_item-icon" src="img/icons/blur.svg" alt="">
+                      <p class="feature_item-title">Водоснабжение</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card_finance-wrapper">
+                  <div class="finance_item">
+                    <p class="finance_item-title1">9,5% / 145 мес</p>
+                    <p class="finance_item_subtitle">доходность / окупаемость</p>
+                  </div>
+                  <div class="finance_item">
+                    <p class="finance_item-title2">444 000 000 ₽</p>
+                    <p class="finance_item_subtitle">100 000 ₽/м2</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!-- Карточка объекта 4 -->
+            <a class="card"  href="object-bsale.html">
+              <div class="card_wrapper">
+                <div class="card_slider">
+                  <img class="card_back card_back--slider" src="img/sale/object4-desktop.jpg" alt="Ресторан">
+                  <div class="slider_container">
+                    <picture class="card_picture card_picture--active">
+                      <img class="card_back" src="img/sale/object1-desktop.jpg" alt="Ресторан">
+                      <img class="card_img" src="img/sale/object1-desktop.jpg" alt="Ресторан">
+                      <div class="object-sale_water">
+                        <img class="card_img" src="img/watermark/watermark-card.png" alt="">
+                      </div>
+                    </picture>
+                    <picture class="card_picture">
+                      <img class="card_back" src="img/sale/object2-desktop.jpg" alt="Ресторан">
+                      <img class="card_img" src="img/sale/object2-desktop.jpg" alt="Ресторан">
+                      <div class="object-sale_water">
+                        <img class="card_img" src="img/watermark/watermark-card.png" alt="">
+                      </div>
+                    </picture>
+                    <picture class="card_picture">
+                      <img class="card_back" src="img/sale/object3-desktop.jpg" alt="Ресторан">
+                      <img class="card_img" src="img/sale/object3-desktop.jpg" alt="Ресторан">
+                      <div class="object-sale_water">
+                        <img class="card_img" src="img/watermark/watermark-card.png" alt="">
+                      </div>
+                    </picture>
+                    <picture class="card_picture">
+                      <img class="card_back" src="img/sale/object4-desktop.jpg" alt="Ресторан">
+                      <img class="card_img" src="img/sale/object4-desktop.jpg" alt="Ресторан">
+                      <div class="object-sale_water">
+                        <img class="card_img" src="img/watermark/watermark-card.png" alt="">
+                      </div>
+                    </picture>
+                    <picture class="card_picture">
+                      <img class="card_back" src="img/sale/object5-desktop.jpg" alt="Ресторан">
+                      <img class="card_img" src="img/sale/object5-desktop.jpg" alt="Ресторан">
+                      <div class="object-sale_water">
+                        <img class="card_img" src="img/watermark/watermark-card.png" alt="">
+                      </div>
+                    </picture>
+                  </div>
+                  <div class="card_picture-wrapper">
+                    <div class="card_picture-stickers">
+                      <div class="stickers_wrapper">
+                        <div class="stickers_item item_color-number">
+                          №1233
+                        </div>
+                        <div class="stickers_item item_color-rent">
+                          С арендатором
+                        </div>
+                        <div class="stickers_item item_color-building">
+                          Нежилое здание
+                        </div>
+                        <div class="stickers_item item_color-business">
+                          Готовый бизнес
+                        </div>
+                      </div>
+                      <img class="stickers-icon" src="img/icons/heart.svg" alt="">
+                      <div class="card_picture-bullets">
+                        <div class="bullet-wrapper bullet-wrapper--active">
+                          <div class="bullet"></div>
+                        </div>
+                        <div class="bullet-wrapper">
+                          <div class="bullet"></div>
+                        </div>
+                        <div class="bullet-wrapper">
+                          <div class="bullet"></div>
+                        </div>
+                        <div class="bullet-wrapper">
+                          <div class="bullet"></div>
+                        </div>
+                        <div class="bullet-wrapper">
+                          <div class="bullet"></div>
+                        </div>
+                      </div>
+                      <div class="card_picture-count">
+                        Еще <br>4 фото
+                      </div>
+                    </div>
+                    <div class="sector"></div>
+                    <div class="sector"></div>
+                    <div class="sector"></div>
+                    <div class="sector"></div>
+                    <div class="sector"></div>
+                  </div>
+                </div>
                 <h2 class="card-title">Аренда помещения под ресторан на<br> улице большой Сампсоновской 19</h2>
                 <p class="card_subtitle">Большой Сампсониевский пр-т  19</p>
                 <div class="card_features-wrapper">
@@ -566,36 +550,24 @@
                 </div>
                 <div class="card_finance-wrapper">
                   <div class="finance_item">
-                    <p class="finance_item-title1">Общепит</p>
-                    <p class="finance_item_subtitle">последний арендатор</p>
+                    <p class="finance_item-title1">540 000 ₽</p>
+                    <p class="finance_item_subtitle">Прибыль в месяц</p>
                   </div>
                   <div class="finance_item">
-                    <p class="finance_item-title2">250 000 ₽/мес</p>
-                    <p class="finance_item_subtitle">100 000 ₽/м2</p>
+                    <p class="finance_item-title2">8 250 000 ₽/мес</p>
+                    <p class="finance_item_subtitle">стоимость бизнеса</p>
                   </div>
                 </div>
               </div>
             </a>
           </ul>
-          <div class="pagination-wrapper pagination-number-wrapper">
-            <button class="prev-button prev-button--disabled"><</button>
-            <div class="pagination-site-number-wrapper">
-              <button class="active">1</button>
-              <button>2</button>
-              <div class="pagination-placeholder pagination-placeholder--active">...</div>
-              <button>11</button>
-            </div>
-            <button class="next-button">></button>
-          </div>
-          <div class="rent_recall">
-            <div id="recall" class="recall_title-wrapper">
-              <p class="recall_title">Предложения по вашему запросу<br class="recall_br"> закончились</p>
-              <p class="recall_subtitle">Оставьте номер телефона и мы подберем для вас другие<br class="recall_br"> предложения</p>
-            </div>
-            <button class="recall_button">Перезвоните мне</button>
-          </div>
         </div>
-        <div class="rent_catalog-map" id="map">
+      </section>
+      <section class="">
+        <div class="rent_title-map">
+          <h1 class="filter-rent_title">Объекты на карте</h1>
+        </div>
+        <div class="favourites-map" id="map">
         </div>
       </section>
       <footer class="footer">
@@ -607,7 +579,7 @@
               </a>
               <p class="footer_logo-title">г. Санкт-Петербург, Греческий пр, 29</p>
               <a href="tel:+78129324747" class="footer_logo-phone">+7(812)932-47-47</a>
-              <a href="#recall" class="footer_logo-title footer_logo-title--recall">Заказать звонок</a>
+              <a class="footer_logo-title footer_logo-title--recall">Заказать звонок</a>
             </div>
             <ul class="footer_links">
               <li class="footer-link">
@@ -668,5 +640,5 @@
     </template>
 
   </body>
-  <script src="js/rent.js" type="module" defer></script>
+  <script src="js/favourites.js" type="module"></script>
 </html>

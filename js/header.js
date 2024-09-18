@@ -47,8 +47,12 @@ export function header() {
     headerSearch.classList.add("header_search--opened");
     headerSearchBlue.classList.add("header_search-blue--opened");
     headerSearchBlue.classList.remove("header_search-blue--active");
-    headerHeart.classList.add("header_heart--opened");
-    headerHeartRed.classList.add("header_heart-red--opened");
+    if(headerHeart) {
+      headerHeart.classList.add("header_heart--opened");
+    }
+    if(headerHeartRed) {
+      headerHeartRed.classList.add("header_heart-red--opened");
+    }
     headerLogo.classList.add("header_logo--opened");
     headerClose.classList.add("header_close--opened");
     if(headerSearchWrapper.classList.contains("header_search-wrapper--opened")) {
@@ -91,7 +95,12 @@ export function header() {
       headerSearch.classList.remove("header_search--opened");
       headerSearch.classList.remove("header_search--active");
       headerSearchBlue.classList.remove("header_search-blue--opened");
-      headerHeart.classList.remove("header_heart--opened");
+      if(headerHeart) {
+        headerHeart.classList.remove("header_heart--opened");
+      }
+      if(headerHeartRed) {
+        headerHeartRed.classList.remove("header_heart-red--opened");
+      }
       headerLogo.classList.remove("header_logo--opened");
       headerClose.classList.remove("header_close--opened");
   }
