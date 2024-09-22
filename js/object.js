@@ -40,7 +40,6 @@ document.addEventListener('click', (e) => {
 })
 
 let watchList = JSON.parse(localStorage.getItem('favorites'));
-console.log(watchList);
 const objectNumberItem = objectNumber.innerText;
 if(watchList && watchList.length){
   const findIndex = watchList.indexOf(objectNumberItem);

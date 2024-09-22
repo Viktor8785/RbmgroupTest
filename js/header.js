@@ -5,7 +5,10 @@ const headerLogo = document.querySelector("#header-logo");
 const headerSearch = document.querySelector("#header-search");
 const headerSearchBlue = document.querySelector("#header-search-blue");
 const headerHeart = document.querySelector("#header-heart");
+const headerHeartEmpty = document.querySelector("#header-heart-empty");
 const headerHeartRed = document.querySelector("#header-heart-red");
+const headerHeartBlueEmpty = document.querySelector("#header-heart-blue-empty");
+const headerHeartBlueRed = document.querySelector("#header-heart-blue-red");
 const headerClose = document.querySelector("#header-close");
 const headerSearchWrapper = document.querySelector("#header-search-wrapper");
 const headerPhone = document.querySelector("#header-phone");
@@ -21,10 +24,6 @@ function handleWidthChangeDesktopSmall(e) {
     headerMenu.classList.remove("header_menu--opened");
     headerNav.classList.remove("header_nav--opened");
     headerNavWrapper.classList.remove("header_nav-wrapper--opened");
-    // headerSearch.classList.remove("header_search--opened");
-    // headerSearchBlue.classList.remove("header_search-blue--opened");
-    // headerHeart.classList.remove("header_heart--opened");
-    // headerHeartRed.classList.remove("header_heart-red--opened");
     headerLogo.classList.remove("header_logo--opened");
     headerClose.classList.remove("header_close--opened");
     headerSearchWrapper.classList.remove("header_search-wrapper--opened");
@@ -49,9 +48,6 @@ export function header() {
     headerSearchBlue.classList.remove("header_search-blue--active");
     if(headerHeart) {
       headerHeart.classList.add("header_heart--opened");
-    }
-    if(headerHeartRed) {
-      headerHeartRed.classList.add("header_heart-red--opened");
     }
     headerLogo.classList.add("header_logo--opened");
     headerClose.classList.add("header_close--opened");
@@ -98,11 +94,16 @@ export function header() {
       if(headerHeart) {
         headerHeart.classList.remove("header_heart--opened");
       }
-      if(headerHeartRed) {
-        headerHeartRed.classList.remove("header_heart-red--opened");
-      }
       headerLogo.classList.remove("header_logo--opened");
       headerClose.classList.remove("header_close--opened");
+  }
+
+  let watchList = JSON.parse(localStorage.getItem('favorites'));
+  if(watchList && watchList.length){
+    headerHeartEmpty.classList.remove('header_heart--view');
+    headerHeartRed.classList.add('header_heart-red--view');
+    headerHeartBlueEmpty.classList.remove('header_heart-blue--view');
+    headerHeartBlueRed.classList.add('header_heart-blue-red--view');
   }
 }
 
