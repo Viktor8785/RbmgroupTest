@@ -84,6 +84,8 @@ export function header() {
     headerSearchBlue.classList.toggle("header_search-blue--active");
   });
 
+  checkFavorites();
+
   function headerMenuClose() {
     headerMenu.classList.remove("header_menu--opened");
       headerNav.classList.remove("header_nav--opened");
@@ -98,12 +100,20 @@ export function header() {
       headerClose.classList.remove("header_close--opened");
   }
 
+}
+
+export function checkFavorites() {
   let watchList = JSON.parse(localStorage.getItem('favorites'));
   if(watchList && watchList.length){
     headerHeartEmpty.classList.remove('header_heart--view');
     headerHeartRed.classList.add('header_heart-red--view');
     headerHeartBlueEmpty.classList.remove('header_heart-blue--view');
     headerHeartBlueRed.classList.add('header_heart-blue-red--view');
+  } else {
+    headerHeartEmpty.classList.add('header_heart--view');
+    headerHeartRed.classList.remove('header_heart-red--view');
+    headerHeartBlueEmpty.classList.add('header_heart-blue--view');
+    headerHeartBlueRed.classList.remove('header_heart-blue-red--view');
   }
 }
 

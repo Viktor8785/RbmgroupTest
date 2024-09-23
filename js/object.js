@@ -1,4 +1,4 @@
-import {header} from './header.js';
+import {header, checkFavorites} from './header.js';
 import {footer} from './footer.js';
 import {initMap, createMarkerList, deleteMarkerList, changeCenter, ZOOM} from './map.js';
 //import IMask from 'imask';
@@ -19,6 +19,12 @@ const objectHeart = document.querySelector("#object-heart");
 const objectHeartRed = document.querySelector("#object-heart-red");
 const objectHeartMob = document.querySelector("#object-heart-mob");
 const objectHeartRedMob = document.querySelector("#object-heart-red-mob");
+
+const headerHeart = document.querySelector("#header-heart");
+const headerHeartEmpty = document.querySelector("#header-heart-empty");
+const headerHeartRed = document.querySelector("#header-heart-red");
+const headerHeartBlueEmpty = document.querySelector("#header-heart-blue-empty");
+const headerHeartBlueRed = document.querySelector("#header-heart-blue-red");
 
 const data = {
   lon: 30.349012,
@@ -66,6 +72,7 @@ objectHeart.addEventListener('click', () => {
   }
   objectHeart.classList.remove('object-sale_stickers-icon--active');
   objectHeartRed.classList.add('object-sale_stickers-icon--active');
+  checkFavorites();
 });
 
 objectHeartMob.addEventListener('click', () => {
@@ -83,6 +90,7 @@ objectHeartMob.addEventListener('click', () => {
   }
   objectHeartMob.classList.remove('object-sale_stickers-icon--active');
   objectHeartRedMob.classList.add('object-sale_stickers-icon--active');
+  checkFavorites();
 });
 
 objectHeartRed.addEventListener('click', () => {
@@ -95,6 +103,7 @@ objectHeartRed.addEventListener('click', () => {
   localStorage.setItem('favorites', JSON.stringify(watchList));
   objectHeart.classList.add('object-sale_stickers-icon--active');
   objectHeartRed.classList.remove('object-sale_stickers-icon--active');
+  checkFavorites();
 });
 
 objectHeartRedMob.addEventListener('click', () => {
@@ -107,6 +116,7 @@ objectHeartRedMob.addEventListener('click', () => {
   localStorage.setItem('favorites', JSON.stringify(watchList));
   objectHeartMob.classList.add('object-sale_stickers-icon--active');
   objectHeartRedMob.classList.remove('object-sale_stickers-icon--active');
+  checkFavorites();
 });
 
 recallInputName.addEventListener('input', () => {
