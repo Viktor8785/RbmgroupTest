@@ -9,6 +9,13 @@ const buttonWrapper = document.querySelector('.pagination-site-number-wrapper');
 const filterBSale = document.querySelector('#filter-bsale');
 const buttons = buttonWrapper.querySelectorAll('button');
 
+
+const inputWrapper1 = document.querySelector('#input-wrapper-1');
+const inputWrapper2 = document.querySelector('#input-wrapper-2');
+const inputs1 = inputWrapper1.querySelectorAll('input');
+const inputs2 = inputWrapper2.querySelectorAll('input');
+const inputAll = document.querySelector('#all-bsale');
+
 const map = document.querySelector("#map");
 const inputBsale = document.querySelector("#bsale-input");
 const dropdownBsale = document.querySelector("#bsale-dropdown");
@@ -28,6 +35,29 @@ const profit = document.querySelector("#profit");
 const windowHeight = document.documentElement.clientHeight;
 map.style.height = windowHeight + 'px';
 let loadMap = false;
+
+const inputs = [...inputs1, ...inputs2];
+
+inputAll.addEventListener('click', () => {
+  if(inputAll.checked === true) {
+    inputs.forEach(inp => {
+      if(inp !== inputAll) {
+        inp.checked = false;
+      }
+    });
+    inputBsale.value = options[0].innerText;
+  }
+});
+
+inputs.forEach(inp => {
+  if(inp !== inputAll) {
+    inp.addEventListener('click', () => {
+      if(inp.checked === true) {
+        inputAll.checked = false;
+      }
+    });
+  }
+});
 
 bSalePriceMax.addEventListener('keypress', (evt) => {
   if (evt.which < 48 || evt.which > 57) {
@@ -111,6 +141,9 @@ initMap().then(map => {
 options.forEach(option => {
   option.addEventListener('click', (ev) => {
     inputBsale.value = ev.target.innerText;
+    if(ev.target.innerText !== options[0].innerText) {
+      inputAll.checked = false;
+    }
   });
 });
 

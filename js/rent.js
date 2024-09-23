@@ -5,14 +5,23 @@ import {initMap, createMarkerList, deleteMarkerList, markerList} from './map.js'
 
 const cardList = document.querySelector('.card-list');
 const cards = cardList.children;
+
 const buttonWrapper = document.querySelector('.pagination-site-number-wrapper');
 const filterRent = document.querySelector('#filter-rent');
 const buttons = buttonWrapper.querySelectorAll('button');
 
+const inputWrapper1 = document.querySelector('#input-wrapper-1');
+const inputWrapper2 = document.querySelector('#input-wrapper-2');
+const inputs1 = inputWrapper1.querySelectorAll('input');
+const inputs2 = inputWrapper2.querySelectorAll('input');
+const inputAll = document.querySelector('#all-rent');
+
 const map = document.querySelector("#map");
+
 const dropdownRent = document.querySelector("#rent-dropdown");
 const inputRent = document.querySelector("#rent-input")
 const options = document.querySelectorAll(".options_item")
+
 const bSale = document.querySelector("#bsale");
 const bSaleMobile = document.querySelector("#bsale-mobile");
 const bSaleTitle = document.querySelector("#bsale-title");
@@ -25,8 +34,30 @@ const squareMax = document.querySelector('#square-max');
 const actual = document.querySelector('#actual');
 
 const windowHeight = document.documentElement.clientHeight;
+const inputs = [...inputs1, ...inputs2];
 
 actual.checked = true;
+
+inputAll.addEventListener('click', () => {
+  if(inputAll.checked === true) {
+    inputs.forEach(inp => {
+      if(inp !== inputAll) {
+        inp.checked = false;
+      }
+    });
+    inputRent.value = options[0].innerText;
+  }
+});
+
+inputs.forEach(inp => {
+  if(inp !== inputAll) {
+    inp.addEventListener('click', () => {
+      if(inp.checked === true) {
+        inputAll.checked = false;
+      }
+    });
+  }
+});
 
 priceRentMax.addEventListener('keypress', (evt) => {
   if (evt.which < 48 || evt.which > 57) {
@@ -136,6 +167,9 @@ initMap().then(map => {
 options.forEach(option => {
   option.addEventListener('click', (ev) => {
     inputRent.value = ev.target.innerText;
+    if(ev.target.innerText !== options[0].innerText) {
+      inputAll.checked = false;
+    }
   });
 })
 

@@ -14,16 +14,47 @@ const squareMax = document.querySelector('#square-max');
 const actual = document.querySelector('#actual-sale');
 const buttons = buttonWrapper.querySelectorAll('button');
 
+const inputWrapper1 = document.querySelector('#input-wrapper-1');
+const inputWrapper2 = document.querySelector('#input-wrapper-2');
+const inputs1 = inputWrapper1.querySelectorAll('input');
+const inputs2 = inputWrapper2.querySelectorAll('input');
+const inputAll = document.querySelector('#all-sale');
+
+
 const map = document.querySelector("#map");
 const dropdownSale = document.querySelector("#sale-dropdown");
 const inputSale = document.querySelector("#sale-input");
 const options = document.querySelectorAll(".options_item")
 
 const windowHeight = document.documentElement.clientHeight;
+
+const inputs = [...inputs1, ...inputs2];
+
 map.style.height = windowHeight + 'px';
 let loadMap = false;
 
 actual.checked = true;
+
+inputAll.addEventListener('click', () => {
+  if(inputAll.checked === true) {
+    inputs.forEach(inp => {
+      if(inp !== inputAll) {
+        inp.checked = false;
+      }
+    });
+    inputSale.value = options[0].innerText;
+  }
+});
+
+inputs.forEach(inp => {
+  if(inp !== inputAll) {
+    inp.addEventListener('click', () => {
+      if(inp.checked === true) {
+        inputAll.checked = false;
+      }
+    });
+  }
+});
 
 filterSale.addEventListener('submit', (evt) => {
   evt.preventDefault();
@@ -107,6 +138,9 @@ initMap().then(map => {
 options.forEach(option => {
   option.addEventListener('click', (ev) => {
     inputSale.value = ev.target.innerText;
+    if(ev.target.innerText !== options[0].innerText) {
+      inputAll.checked = false;
+    }
   });
 });
 
