@@ -9,12 +9,12 @@ const buttonWrapper = document.querySelector('.pagination-site-number-wrapper');
 const filterBSale = document.querySelector('#filter-bsale');
 const buttons = buttonWrapper.querySelectorAll('button');
 
-
 const inputWrapper1 = document.querySelector('#input-wrapper-1');
 const inputWrapper2 = document.querySelector('#input-wrapper-2');
 const inputs1 = inputWrapper1.querySelectorAll('input');
 const inputs2 = inputWrapper2.querySelectorAll('input');
 const inputAll = document.querySelector('#all-bsale');
+const recallLink = document.querySelector('.recall_link');
 
 const map = document.querySelector("#map");
 const inputBsale = document.querySelector("#bsale-input");
@@ -37,6 +37,17 @@ map.style.height = windowHeight + 'px';
 let loadMap = false;
 
 const inputs = [...inputs1, ...inputs2];
+
+recallLink.addEventListener('click', () => {
+  inputs.forEach(inp => {
+    if(inp !== inputAll) {
+      inp.checked = false;
+    } else {
+      inp.checked = true;
+    }
+  });
+  inputBsale.value = options[0].innerText;
+});
 
 inputAll.addEventListener('click', () => {
   if(inputAll.checked === true) {

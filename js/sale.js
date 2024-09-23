@@ -19,7 +19,7 @@ const inputWrapper2 = document.querySelector('#input-wrapper-2');
 const inputs1 = inputWrapper1.querySelectorAll('input');
 const inputs2 = inputWrapper2.querySelectorAll('input');
 const inputAll = document.querySelector('#all-sale');
-
+const recallLink = document.querySelector('.recall_link');
 
 const map = document.querySelector("#map");
 const dropdownSale = document.querySelector("#sale-dropdown");
@@ -34,6 +34,17 @@ map.style.height = windowHeight + 'px';
 let loadMap = false;
 
 actual.checked = true;
+
+recallLink.addEventListener('click', () => {
+  inputs.forEach(inp => {
+    if(inp !== inputAll) {
+      inp.checked = false;
+    } else {
+      inp.checked = true;
+    }
+  });
+  inputSale.value = options[0].innerText;
+});
 
 inputAll.addEventListener('click', () => {
   if(inputAll.checked === true) {

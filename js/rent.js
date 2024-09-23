@@ -9,6 +9,7 @@ const cards = cardList.children;
 const buttonWrapper = document.querySelector('.pagination-site-number-wrapper');
 const filterRent = document.querySelector('#filter-rent');
 const buttons = buttonWrapper.querySelectorAll('button');
+const recallLink = document.querySelector('.recall_link');
 
 const inputWrapper1 = document.querySelector('#input-wrapper-1');
 const inputWrapper2 = document.querySelector('#input-wrapper-2');
@@ -37,6 +38,17 @@ const windowHeight = document.documentElement.clientHeight;
 const inputs = [...inputs1, ...inputs2];
 
 actual.checked = true;
+
+recallLink.addEventListener('click', () => {
+  inputs.forEach(inp => {
+    if(inp !== inputAll) {
+      inp.checked = false;
+    } else {
+      inp.checked = true;
+    }
+  });
+  inputRent.value = options[0].innerText;
+});
 
 inputAll.addEventListener('click', () => {
   if(inputAll.checked === true) {
