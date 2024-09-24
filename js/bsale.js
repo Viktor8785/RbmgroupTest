@@ -17,9 +17,7 @@ const inputAll = document.querySelector('#all-bsale');
 const recallLink = document.querySelector('.recall_link');
 
 const map = document.querySelector("#map");
-const inputBsale = document.querySelector("#bsale-input");
-const dropdownBsale = document.querySelector("#bsale-dropdown");
-const options = document.querySelectorAll(".options_item")
+
 const dropdownPyback = document.querySelector("#payback-dropdown");
 const inputPayback = document.querySelector("#payback-input")
 const optionsPayback = document.querySelectorAll(".options_item--payback")
@@ -46,7 +44,6 @@ recallLink.addEventListener('click', () => {
       inp.checked = true;
     }
   });
-  inputBsale.value = options[0].innerText;
 });
 
 inputAll.addEventListener('click', () => {
@@ -56,7 +53,6 @@ inputAll.addEventListener('click', () => {
         inp.checked = false;
       }
     });
-    inputBsale.value = options[0].innerText;
   }
 });
 
@@ -149,19 +145,6 @@ initMap().then(map => {
   }
 });
 
-options.forEach(option => {
-  option.addEventListener('click', (ev) => {
-    inputBsale.value = ev.target.innerText;
-    if(ev.target.innerText !== options[0].innerText) {
-      inputAll.checked = false;
-    }
-  });
-});
-
-dropdownBsale.onclick = function() {
-  dropdownBsale.classList.toggle("active");
-}
-
 optionsPayback.forEach(option => {
   option.addEventListener('click', (ev) => {
     inputPayback.value = ev.target.innerText;
@@ -189,18 +172,12 @@ budget5.addEventListener('click', (ev) => {
 });
 
 window.addEventListener('click', (ev) => {
-  if (!ev.composedPath().includes(dropdownBsale) && dropdownBsale.classList.contains("active")) {
-    dropdownBsale.classList.toggle("active");
-  }
   if (!ev.composedPath().includes(dropdownPyback) && dropdownPyback.classList.contains("active")) {
     dropdownPyback.classList.toggle("active");
   }
 });
 
 window.addEventListener('touchstart', (ev) => {
-  if (!ev.composedPath().includes(dropdownBsale) && dropdownBsale.classList.contains("active")) {
-    dropdownBsale.classList.toggle("active");
-  }
   if (!ev.composedPath().includes(dropdownPyback) && dropdownPyback.classList.contains("active")) {
     dropdownPyback.classList.toggle("active");
   }

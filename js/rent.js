@@ -19,10 +19,6 @@ const inputAll = document.querySelector('#all-rent');
 
 const map = document.querySelector("#map");
 
-const dropdownRent = document.querySelector("#rent-dropdown");
-const inputRent = document.querySelector("#rent-input")
-const options = document.querySelectorAll(".options_item")
-
 const bSale = document.querySelector("#bsale");
 const bSaleMobile = document.querySelector("#bsale-mobile");
 const bSaleTitle = document.querySelector("#bsale-title");
@@ -47,7 +43,6 @@ recallLink.addEventListener('click', () => {
       inp.checked = true;
     }
   });
-  inputRent.value = options[0].innerText;
 });
 
 inputAll.addEventListener('click', () => {
@@ -57,7 +52,6 @@ inputAll.addEventListener('click', () => {
         inp.checked = false;
       }
     });
-    inputRent.value = options[0].innerText;
   }
 });
 
@@ -176,19 +170,6 @@ initMap().then(map => {
   }
 });
 
-options.forEach(option => {
-  option.addEventListener('click', (ev) => {
-    inputRent.value = ev.target.innerText;
-    if(ev.target.innerText !== options[0].innerText) {
-      inputAll.checked = false;
-    }
-  });
-})
-
-dropdownRent.onclick = function() {
-  dropdownRent.classList.toggle("active");
-};
-
 bSale.addEventListener('click', (ev) => {
   if (!bSale.checked) {
     bSaleTitle.classList.add('business-sale_disabled');
@@ -214,18 +195,6 @@ bSaleMobile.addEventListener('click', (ev) => {
     bSaleTitle.classList.remove('business-sale_disabled');
     priceBSale.disabled = false;
     priceBSaleMax.disabled = false;
-  }
-});
-
-window.addEventListener('click', (ev) => {
-  if (!ev.composedPath().includes(dropdownRent) && dropdownRent.classList.contains("active")) {
-    dropdownRent.classList.toggle("active");
-  }
-});
-
-window.addEventListener('touchstart', (ev) => {
-  if (!ev.composedPath().includes(dropdownRent) && dropdownRent.classList.contains("active")) {
-    dropdownRent.classList.toggle("active");
   }
 });
 

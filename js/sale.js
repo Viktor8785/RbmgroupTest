@@ -22,9 +22,6 @@ const inputAll = document.querySelector('#all-sale');
 const recallLink = document.querySelector('.recall_link');
 
 const map = document.querySelector("#map");
-const dropdownSale = document.querySelector("#sale-dropdown");
-const inputSale = document.querySelector("#sale-input");
-const options = document.querySelectorAll(".options_item")
 
 const windowHeight = document.documentElement.clientHeight;
 
@@ -43,7 +40,6 @@ recallLink.addEventListener('click', () => {
       inp.checked = true;
     }
   });
-  inputSale.value = options[0].innerText;
 });
 
 inputAll.addEventListener('click', () => {
@@ -53,7 +49,6 @@ inputAll.addEventListener('click', () => {
         inp.checked = false;
       }
     });
-    inputSale.value = options[0].innerText;
   }
 });
 
@@ -143,31 +138,6 @@ initMap().then(map => {
   if([...cards].length && !markerList.length) {
     deleteMarkerList(map);
     createMarkerList([...cards], map);
-  }
-});
-
-options.forEach(option => {
-  option.addEventListener('click', (ev) => {
-    inputSale.value = ev.target.innerText;
-    if(ev.target.innerText !== options[0].innerText) {
-      inputAll.checked = false;
-    }
-  });
-});
-
-dropdownSale.onclick = function() {
-  dropdownSale.classList.toggle("active");
-};
-
-window.addEventListener('click', (ev) => {
-  if (!ev.composedPath().includes(dropdownSale) && dropdownSale.classList.contains("active")) {
-    dropdownSale.classList.toggle("active");
-  }
-});
-
-window.addEventListener('touchstart', (ev) => {
-  if (!ev.composedPath().includes(dropdownSale) && dropdownSale.classList.contains("active")) {
-    dropdownSale.classList.toggle("active");
   }
 });
 
