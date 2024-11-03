@@ -34,7 +34,7 @@
               </form>
               <div class="item-wrapper">
                 <a class="header_nav-item" href="rent.html">Аренда</a>
-                <a class="header_nav-item header_nav-item--active">Покупка (инвестиции)</a>
+                <a class="header_nav-item" href="sale.html">Покупка (инвестиции)</a>
                 <a class="header_nav-item" href="bsale.html">Готовый бизнес</a>
               </div>
               <div class="header_nav-phone">
@@ -65,454 +65,439 @@
           </form>
         </div>
       </section>
-      <section class="filter-rent">
-        <form class="filter-rent_form" id="filter-sale">
-          <div class="filter-rent_objects">
-            <h1 class="filter-rent_title">Покупка коммерческой недвижимости<br class="filter-rent_br"> в Санкт-Петербурге</h1>
-            <div class="filter-rent_checks">
-              <label for="actual-sale" class="objects_label">
-                <input type="checkbox" class="visually-hidden input-actual" id="actual-sale" name="actualSale" checked="checked">
-                <img class="check-icon input-actual__empty" src="img/icons/check-empty.svg" alt="">
-                <img class="check-icon input-actual__filled check-icon" src="img/icons/check-filled.svg" alt="">
-                <p class="input_title">Актуальные объекты</p>
-              </label>
-              <label for="occupied-sale" class="objects_label">
-                <input type="checkbox" class="visually-hidden input-occupied" id="occupied-sale" name="occupiedSale">
-                <img class="check-icon input-occupied__empty" src="img/icons/check-empty.svg" alt="">
-                <img class="check-icon input-occupied__filled" src="img/icons/check-filled.svg" alt="">
-                <p class="input_title">Объекты уже заняты</p>
-              </label>
+      <section class="main-page">
+        <div class="main-main">
+          <div class="main-main_context">
+            <h1 class="main-main_title">Коммерческая<br>недвижимость</h1>
+            <p class="main-main_subtitle">15 лет на рынке недвижимости</p>
+            <p class="main-main_subtitle">Более 1 000 успешных сделок по аренде и продаже коммерции</p>
+            <div class="main-main_button-wrapper">
+              <a class="main-main_button" href="sale.html">Купить</a>
+              <a class="main-main_button" href="rent.html">Арендовать</a>
+              <a class="main-main_button" href="bsale.html">Готовый бизнес</a>
             </div>
-          </div>
-          <div class="filter-rent_filter">
-            <div class="filter-sale_filter-wrapper">
-              <div class="filter-rent_block filter-rent_block--rent">
-                <p class="block_title">Что ищем?</p>
-                <div class="filter-rent_checks--mobile">
-                  <label for="actual-sale-mobile" class="objects_label">
-                    <input type="checkbox" class="visually-hidden input-actual" id="actual-sale-mobile" name="actualSaleMobile" checked="checked">
-                    <img class="check-icon input-actual__empty" src="img/icons/check-empty.svg" alt="">
-                    <img class="check-icon input-actual__filled" src="img/icons/check-filled.svg" alt="">
-                    <p class="input_title">Актуальные объекты</p>
-                  </label>
-                  <label for="occupied-sale-mobile" class="objects_label">
-                    <input type="checkbox" class="visually-hidden input-occupied" id="occupied-sale-mobile" name="occupiedSaleMobile">
-                    <img class="check-icon input-occupied__empty" src="img/icons/check-empty.svg" alt="">
-                    <img class="check-icon input-occupied__filled" src="img/icons/check-filled.svg" alt="">
-                    <p class="input_title">Объекты уже заняты</p>
-                  </label>
-                </div>
-                <div class="type_wrapper" id="input-wrapper-1">
-                  <label for="all-sale" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_sale" id="all-sale" name="allSale">
-                    <div class="type_category">Все объекты</div>
-                  </label>
-                  <label for="сommercial-sale" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_sale" id="сommercial-sale" name="сommercialSale">
-                    <div class="type_category">Торговое</div>
-                  </label>
-                  <label for="products-sale" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_sale" id="products-sale" name="productsSale">
-                    <div class="type_category">Продукты</div>
-                  </label>
-                  <label for="catering-sale" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_sale" id="catering-sale" name="cateringSale">
-                    <div class="type_category">Общепит</div>
-                  </label>
-                  <label for="hotel-sale" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_sale" id="hotel-sale" name="hotelSale">
-                    <div class="type_category">Отель</div>
-                  </label>
-                </div>
-                <div class="type_wrapper" id="input-wrapper-2">
-                  <label for="ofice-sale" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_sale" id="ofice-sale" name="oficeSale">
-                    <div class="type_category">Офис</div>
-                  </label>
-                  <label for="warehouse-sale" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_sale" id="warehouse-sale" name="warehouseSale">
-                    <div class="type_category">Склад, производство</div>
-                  </label>
-                  <label for="new-sale" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_sale" id="new-sale" name="newSale">
-                    <div class="type_category">Новостройки</div>
-                  </label>
-                  <label for="building-sale" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_sale" id="building-sale" name="buildingSale">
-                    <div class="type_category">Здание</div>
-                  </label>
-                  <label for="other-sale" class="type_label">
-                    <input type="checkbox" class="visually-hidden type-all_sale" id="other-sale" name="otherSale">
-                    <div class="type_category">Другое</div>
-                  </label>
-                </div>
+            <div class="main-main_subbutton-wrapper">
+              <div class="main-main_subtitle-wrapper">
+                <p class="main-main_subtitle">Другие действия</p>
+                <img class="main-main_down" src="img/icons/down.svg" alt="">
               </div>
-              <div class="filter-rent_block filter-sale_block--budget">
-                <p class="block_title">Бюджет, ₽</p>
-                <div class="price_wrapper">
-                  <input class="price_input sale_price" type="text" placeholder="От" name="rentPriceMin" id="price-sale">
-                  <input class="price_input sale_price sale_price--to" type="text" placeholder="До" name="rentPriceMax" id="price-sale-max">
-                </div>
-                <div class="checks-wrapper">
-                  <div class="form-switch arendator_label">
-                    <label>
-                      <input type="checkbox" name="arendator" id="arendator-sale">
-                      <i></i>
-                    </label>
-                    <span class="form-switch_title">Только с арендатором</span>
-                  </div>
-                  <div class="form-switch">
-                    <label>
-                      <input type="checkbox" name="payback" id="payback-sale">
-                      <i></i>
-                    </label>
-                    <span class="form-switch_title">Окупаемость до 12 лет</span>
-                  </div>
-                </div>
-              </div>
-              <div class="filter-rent_block filter-rent_block--square">
-                <p class="block_title">Площадь, м<sup class="block_sup">2</sup></p>
-                <div class="price_wrapper">
-                  <input class="price_input  sale_price" type="text" placeholder="От" name="squareMin" id="square-min">
-                  <input class="price_input sale_price sale_price--to" type="text" placeholder="До" name="squareMax" id="square-max">
-                </div>
-                <div class="form-switch">
-                  <label>
-                    <input type="checkbox" name="first-floor" id="first-floor">
-                    <i></i>
-                  </label>
-                  <span class="form-switch_title">Только 1 этаж</span>
-                </div>
+              <div class="main-main_subbutton-container">
+                <a class="main-main_subbutton">Продать помещение</a>
+                <a class="main-main_subbutton">Найти арендатора</a>
+                <a class="main-main_subbutton">Продать бизнес</a>
               </div>
             </div>
           </div>
-        </form>
-      </section>
-      <div class="show-map">
-        Показать на карте
-      </div>
-      <section class="rent_catalog">
-        <div>
-          <ul class="card-list card-list--deal">
-            <!-- Карточка объекта 1 -->
-            <a class="card card--deal" href="object-sale.html">
-              <div class="card_wrapper">
-                <div class="card_slider">
-                  <div class="slider_container">
-                    <picture class="card_picture card_picture--active">
-                      <img class="card_img" src="img/sale/object1-desktop.jpg" alt="Ресторан">
-                      <div class="object-sale_water">
-                        <img class="card_img" src="img/watermark/watermark-card.png" alt="">
-                      </div>
-                    </picture>
-                    <picture class="card_picture">
-                      <img class="card_img" src="img/sale/object2-desktop.jpg" alt="Ресторан">
-                      <div class="object-sale_water">
-                        <img class="card_img" src="img/watermark/watermark-card.png" alt="">
-                      </div>
-                    </picture>
-                    <picture class="card_picture">
-                      <img class="card_img" src="img/sale/object3-desktop.jpg" alt="Ресторан">
-                      <div class="object-sale_water">
-                        <img class="card_img" src="img/watermark/watermark-card.png" alt="">
-                      </div>
-                    </picture>
-                    <picture class="card_picture">
-                      <img class="card_img" src="img/sale/object4-desktop.jpg" alt="Ресторан">
-                      <div class="object-sale_water">
-                        <img class="card_img" src="img/watermark/watermark-card.png" alt="">
-                      </div>
-                    </picture>
-                    <picture class="card_picture">
-                      <img class="card_img" src="img/sale/object5-desktop.jpg" alt="Ресторан">
-                      <div class="object-sale_water">
-                        <img class="card_img" src="img/watermark/watermark-card.png" alt="">
-                      </div>
-                    </picture>
-                  </div>
-                  <div class="card_picture-wrapper">
-                    <div class="card_picture-stickers">
-                      <div class="stickers_wrapper">
-                        <div class="stickers_item item_color-number">№1235</div>
-                      </div>
-                      <div>
-                        <img class="stickers-icon stickers-icon--view" src="img/icons/heart.svg" alt="">
-                        <img class="stickers-icon_red" src="img/icons/heart-favorit.svg" alt="">
-                      </div>
-                      <div class="card_picture-bullets">
-                        <div class="bullet-wrapper bullet-wrapper--active">
-                          <div class="bullet"></div>
-                        </div>
-                        <div class="bullet-wrapper">
-                          <div class="bullet"></div>
-                        </div>
-                        <div class="bullet-wrapper">
-                          <div class="bullet"></div>
-                        </div>
-                        <div class="bullet-wrapper">
-                          <div class="bullet"></div>
-                        </div>
-                        <div class="bullet-wrapper">
-                          <div class="bullet"></div>
-                        </div>
-                      </div>
-                      <div class="card_picture-count">
-                        Еще <br>4 фото
-                      </div>
-                    </div>
-                    <div class="sector"></div>
-                    <div class="sector"></div>
-                    <div class="sector"></div>
-                    <div class="sector"></div>
-                    <div class="sector"></div>
-                  </div>
+          <img class="main-main_img" src="img/main/main-main.png" alt="">
+        </div>
+
+        <div class="main-consult">
+          <h2 class="main-consult_title">Бесплатная консультация от наших специалистов</h2>
+          <div class="main-consult_container">
+            <div class="main-consult_wrapper">
+              <img class="main-consult_img-mobile" src="img/main/main-block1-mobile.jpg" alt="">
+              <div class="main-consult_block-context">
+                <div class="block-text">
+                  <h3 class="main-consult_block-title">Для собственников<br>недвижимости</h3>
+                  <p class="main-consult_block-subtitle">Хочу продать помещение или найти надежного арендатора</p>
                 </div>
-                <h2 class="card-title">Продажа помещения с арендатором и<br> окупаемостью за 145 месяцев</h2>
-                <!-- <div class="card_subtitle-wrapper">
-                  <div class="stickers_wrapper">
-                    <div class="stickers_item stickers_item--subtitle">Вход со двора Вход со двора</div>
-                  </div>
-                  <p class="card_subtitle">Большой Сампсониевский пр-т  19 Большой Сампсониевский пр-т  19</p>
-                </div> -->
-                <div class="stickers_item stickers_item--subtitle">Вход со двора</div>
-                <p class="card_subtitle">Большой Сампсониевский пр-т  19</p>
-                <div class="card_features-wrapper">
-                  <div class="features_object">
-                    <div class="feature_item">
-                      <img class="feature_item-icon" src="img/icons/maximize.svg" alt="">
-                      <p class="feature_item-title">120 м<sup>2</sup></p>
-                    </div>
-                    <div class="feature_item">
-                      <img class="feature_item-icon" src="img/icons/arrow-up.svg" alt="">
-                      <p class="feature_item-title">1 этаж</p>
-                    </div>
-                    <div class="feature_item">
-                      <img class="feature_item-icon" src="img/icons/map.svg" alt="">
-                      <p class="feature_item-title">Спальный район</p>
-                    </div>
-                  </div>
-                  <div class="features_object feature_feature">
-                    <div class="feature_item">
-                      <img class="feature_item-icon" src="img/icons/terras.svg" alt="">
-                      <p class="feature_item-title">Терраса</p>
-                    </div>
-                    <div class="feature_item">
-                      <img class="feature_item-icon" src="img/icons/wind.svg" alt="">
-                      <p class="feature_item-title">Вытяжка</p>
-                    </div>
-                    <div class="feature_item">
-                      <img class="feature_item-icon" src="img/icons/blur.svg" alt="">
-                      <p class="feature_item-title">Водоснабжение</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card_finance-wrapper">
-                  <div class="finance_item">
-                    <p class="finance_item-title1">9,5% / 145 мес</p>
-                    <p class="finance_item_subtitle">доходность / окупаемость</p>
-                  </div>
-                  <div class="finance_item">
-                    <p class="finance_item-title2">444 000 000 ₽</p>
-                    <p class="finance_item_subtitle">100 000 ₽/м2</p>
-                  </div>
-                </div>
+                <a class="main-main_button main-main_button--consult">Получить консультацию</a>
               </div>
-            </a>
-            <!-- Карточка объекта 2 -->
-            <a class="card card--deal" href="object-sale.html">
-              <div class="card_wrapper">
-                <div class="card_slider">
-                  <div class="slider_container">
-                    <picture class="card_picture card_picture--active">
-                      <img class="card_img" src="img/sale/object1-desktop.jpg" alt="Ресторан">
-                      <div class="object-sale_water">
-                        <img class="card_img" src="img/watermark/watermark-card.png" alt="">
-                      </div>
-                    </picture>
-                    <picture class="card_picture">
-                      <img class="card_img" src="img/sale/object2-desktop.jpg" alt="Ресторан">
-                      <div class="object-sale_water">
-                        <img class="card_img" src="img/watermark/watermark-card.png" alt="">
-                      </div>
-                    </picture>
-                    <picture class="card_picture">
-                      <img class="card_img" src="img/sale/object3-desktop.jpg" alt="Ресторан">
-                      <div class="object-sale_water">
-                        <img class="card_img" src="img/watermark/watermark-card.png" alt="">
-                      </div>
-                    </picture>
-                    <picture class="card_picture">
-                      <img class="card_img" src="img/sale/object4-desktop.jpg" alt="Ресторан">
-                      <div class="object-sale_water">
-                        <img class="card_img" src="img/watermark/watermark-card.png" alt="">
-                      </div>
-                    </picture>
-                    <picture class="card_picture">
-                      <img class="card_img" src="img/sale/object5-desktop.jpg" alt="Ресторан">
-                      <div class="object-sale_water">
-                        <img class="card_img" src="img/watermark/watermark-card.png" alt="">
-                      </div>
-                    </picture>
-                  </div>
-                  <div class="card_picture-wrapper">
-                    <div class="card_picture-stickers">
-                      <div class="stickers_wrapper">
-                        <div class="stickers_item item_color-number">№2235</div>
-                      </div>
-                      <div>
-                        <img class="stickers-icon stickers-icon--view" src="img/icons/heart.svg" alt="">
-                        <img class="stickers-icon_red" src="img/icons/heart-favorit.svg" alt="">
-                      </div>
-                      <div class="card_picture-bullets">
-                        <div class="bullet-wrapper bullet-wrapper--active">
-                          <div class="bullet"></div>
-                        </div>
-                        <div class="bullet-wrapper">
-                          <div class="bullet"></div>
-                        </div>
-                        <div class="bullet-wrapper">
-                          <div class="bullet"></div>
-                        </div>
-                        <div class="bullet-wrapper">
-                          <div class="bullet"></div>
-                        </div>
-                        <div class="bullet-wrapper">
-                          <div class="bullet"></div>
-                        </div>
-                      </div>
-                      <div class="card_picture-count">
-                        Еще <br>4 фото
-                      </div>
-                    </div>
-                    <div class="sector"></div>
-                    <div class="sector"></div>
-                    <div class="sector"></div>
-                    <div class="sector"></div>
-                    <div class="sector"></div>
-                  </div>
+              <img class="main-consult_img" src="img/main/main-block1.png" alt="">
+            </div>
+            <div class="main-consult_wrapper">
+              <img class="main-consult_img-mobile" src="img/main/main-block2-mobile.jpg" alt="">
+              <div class="main-consult_block-context">
+                <div class="block-text">
+                  <h3 class="main-consult_block-title">В поиске объекта?</h3>
+                  <p class="main-consult_block-subtitle">Хочу купить или арендовать помещение</p>
                 </div>
-                <h2 class="card-title">Продажа помещения с арендатором и<br> окупаемостью за 145 месяцев</h2>
-                <p class="card_subtitle">Большой Сампсониевский пр-т  19</p>
-                <div class="card_features-wrapper">
-                  <div class="features_object">
-                    <div class="feature_item">
-                      <img class="feature_item-icon" src="img/icons/maximize.svg" alt="">
-                      <p class="feature_item-title">120 м<sup>2</sup></p>
-                    </div>
-                    <div class="feature_item">
-                      <img class="feature_item-icon" src="img/icons/arrow-up.svg" alt="">
-                      <p class="feature_item-title">1 этаж</p>
-                    </div>
-                    <div class="feature_item">
-                      <img class="feature_item-icon" src="img/icons/map.svg" alt="">
-                      <p class="feature_item-title">Спальный район</p>
-                    </div>
-                  </div>
-                  <div class="features_object feature_feature">
-                    <div class="feature_item">
-                      <img class="feature_item-icon" src="img/icons/terras.svg" alt="">
-                      <p class="feature_item-title">Терраса</p>
-                    </div>
-                    <div class="feature_item">
-                      <img class="feature_item-icon" src="img/icons/wind.svg" alt="">
-                      <p class="feature_item-title">Вытяжка</p>
-                    </div>
-                    <div class="feature_item">
-                      <img class="feature_item-icon" src="img/icons/blur.svg" alt="">
-                      <p class="feature_item-title">Водоснабжение</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card_finance-wrapper">
-                  <div class="finance_item">
-                    <p class="finance_item-title1">9,5% / 145 мес</p>
-                    <p class="finance_item_subtitle">доходность / окупаемость</p>
-                  </div>
-                  <div class="finance_item">
-                    <p class="finance_item-title2">444 000 000 ₽</p>
-                    <p class="finance_item_subtitle">100 000 ₽/м2</p>
-                  </div>
-                </div>
+                <a class="main-main_button main-main_button--consult">Получить консультацию</a>
               </div>
-            </a>
-          </ul>
-          <div class="pagination-wrapper pagination-number-wrapper">
-            <button class="prev-button prev-button--disabled"><</button>
-            <div class="pagination-site-number-wrapper">
-              <button class="active">1</button>
-              <button>2</button>
-              <div class="pagination-placeholder pagination-placeholder--active">...</div>
-              <button>11</button>
+              <img class="main-consult_img" src="img/main/main-block2.png" alt="">
             </div>
-            <button class="next-button">></button>
-          </div>
-          <div class="rent_recall">
-            <div id="recall" class="recall_title-wrapper">
-              <p class="recall_title">Не нашли помещение?</p>
-              <p class="recall_title-sub">Посмотрите <span class="recall_link">во всех форматах</span> или<br class="recall_br"> напишите нам.</p>
+            <div class="main-consult_wrapper">
+              <img class="main-consult_img-mobile" src="img/main/main-block3-mobile.jpg" alt="">
+              <div class="main-consult_block-context">
+                <div class="block-text">
+                  <h3 class="main-consult_block-title">Покупка и продажа<br>готового бизнеса</h3>
+                  <p class="main-consult_block-subtitle">Хочу оценить/продать свой бизнес или купить готовое заведение</p>
+                </div>
+                <a class="main-main_button main-main_button--consult">Получить консультацию</a>
+              </div>
+              <img class="main-consult_img" src="img/main/main-block3.png" alt="">
             </div>
-              <a href="https://api.whatsapp.com/send/?phone=79052673439" class="recall_button">
-                Написать в WhatsApp
-              </a>
           </div>
         </div>
-        <div class="rent_catalog-map" id="map">
+      </section>
+
+      <section class="main-deals">
+        <h2 class="main-clients_title">Покупка недвижимости</h2>
+        <div class="main-consult_container">
+
+          <div class="main-deals_wrapper">
+            <img class="main-deals_img" src="img/main/main-deals1.jpg" alt="">
+            <img class="main-deals_img-mobile" src="img/main/main-deals1-mobile.jpg" alt="">
+            <div class="main-deals_block-context">
+              <div class="block-text">
+                <h3 class="main-consult_block-title">Инвестиции в коммерческую<br>недвижимость</h3>
+                <p class="main-deals_block-subtitle">Ликвидные объекты и помещения в новостройках под свой бизнес или для сдачи в аренду</p>
+              </div>
+              <a class="main-deals_button" href="sale.html">Смотреть</a>
+            </div>
+          </div>
+
+          <div class="main-deals_wrapper">
+            <img class="main-deals_img" src="img/main/main-deals2.jpg" alt="">
+            <img class="main-deals_img-mobile" src="img/main/main-deals2-mobile.jpg" alt="">
+            <div class="main-deals_block-context">
+              <div class="block-text">
+                <h3 class="main-consult_block-title">Готовый арендный<br>бизнес</h3>
+                <p class="main-deals_block-subtitle">Объекты с надежными, сетевыми арендаторами. Пассивный доход с первого месяца покупки</p>
+              </div>
+              <a class="main-deals_button" href="sale.html">Смотреть</a>
+            </div>
+          </div>
+
+          <div class="main-deals_wrapper">
+            <img class="main-deals_img" src="img/main/main-deals3.jpg" alt="">
+            <img class="main-deals_img-mobile" src="img/main/main-deals3-mobile.jpg" alt="">
+            <div class="main-deals_block-context main-deals_block-context--call">
+              <div class="block-text">
+                <h3 class="main-consult_block-title">Подберем недвижимость<br>по запросу и бюджету</h3>
+                <p class="main-deals_block-subtitle">Просто расскажите, что вы ищите и мы найдем идеальный объект для вас</p>
+              </div>
+              <div class="main-deals_button-wrapper">
+                <a class="main-deals_button main-deals_button--call" href="tel:+78129324747">Позвонить</a>
+                <a class="main-deals_button main-deals_button--whatsapp" href="https://api.whatsapp.com/send/?phone=79052673439">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <h2 class="main-clients_title main-deals_title">Аренда</h2>
+        <div class="main-consult_container">
+
+          <div class="main-deals_wrapper">
+            <img class="main-deals_img" src="img/main/main-deals4.jpg" alt="">
+            <img class="main-deals_img-mobile" src="img/main/main-deals4-mobile.jpg" alt="">
+            <div class="main-deals_block-context">
+              <div class="block-text">
+                <h3 class="main-consult_block-title">Торговые помещения</h3>
+                <p class="main-deals_block-subtitle">Под любой вид деятельности, на трафике, все районы города</p>
+              </div>
+              <a class="main-deals_button" href="rent.html">Смотреть</a>
+            </div>
+          </div>
+
+          <div class="main-deals_wrapper">
+            <img class="main-deals_img" src="img/main/main-deals5.jpg" alt="">
+            <img class="main-deals_img-mobile" src="img/main/main-deals5-mobile.jpg" alt="">
+            <div class="main-deals_block-context">
+              <div class="block-text">
+                <h3 class="main-consult_block-title">Помещения под общепит</h3>
+                <p class="main-deals_block-subtitle">Полностью или частично оборудованы и меблированы, ранее располагался общепит. Система вентиляции</p>
+              </div>
+              <a class="main-deals_button" href="rent.html">Смотреть</a>
+            </div>
+          </div>
+
+          <div class="main-deals_wrapper">
+            <img class="main-deals_img" src="img/main/main-deals6.jpg" alt="">
+            <img class="main-deals_img-mobile" src="img/main/main-deals6-mobile.jpg" alt="">
+            <div class="main-deals_block-context main-deals_block-context--call">
+              <div class="block-text">
+                <h3 class="main-consult_block-title">Найдем помещение под ваш<br>бизнес</h3>
+                <p class="main-deals_block-subtitle">Просто напишите нам критерии поиска и специалист подберет объект подходящий под ваш формат бизнеса</p>
+              </div>
+              <div class="main-deals_button-wrapper">
+                <a class="main-deals_button main-deals_button--call" href="tel:+78129324747">Позвонить</a>
+                <a class="main-deals_button main-deals_button--whatsapp" href="https://api.whatsapp.com/send/?phone=79052673439">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="main-data">
+        <div class="main-data_wrapper">
+
+          <div class="main-data_block">
+            <div class="block-text_wrapper">
+              <p class="data-block-title">9591</p>
+              <p class="block-subtitle">объектов<br class="block-br"> в базе</p>
+            </div>
+          </div>
+
+          <div class="main-data_block">
+            <div class="block-text_wrapper">
+              <p class="data-block-title">239</p>
+              <p class="block-subtitle">актуальных<br class="block-br"> продаж</p>
+            </div>
+          </div>
+
+          <div class="main-data_block">
+            <div class="block-text_wrapper">
+              <p class="data-block-title">255</p>
+              <p class="block-subtitle">актуальных<br class="block-br"> аренд</p>
+            </div>
+          </div>
+
+          <div class="main-data_block">
+            <div class="block-text_wrapper">
+              <p class="data-block-title">10</p>
+              <p class="block-subtitle">продаж<br class="block-br"> бизнеса</p>
+            </div>
+          </div>
+
         </div>
       </section>
+
+      <section class="main-finance">
+
+        <div class="finance-block">
+          <h3 class="finance-block-title">Срочный выкуп вашей<br>недвижимости</h3>
+          <div class="finance-block-text_wrapper">
+
+            <div class="block-item_wrapper">
+              <img class="block-item_icon" width="24" height="24" src="img/icons/check-circle.svg">
+              <p class="finance-block-subtitle">Произведем бесплатный выезд и оценку вашего помещения</p>
+            </div>
+
+            <div class="block-item_wrapper">
+              <img class="block-item_icon" width="24" height="24" src="img/icons/check-circle.svg">
+              <p class="finance-block-subtitle">Решим проблемы, связанные с обременением, долгами и ипотекой</p>
+            </div>
+
+            <div class="block-item_wrapper">
+              <img class="block-item_icon" width="24" height="24" src="img/icons/check-circle.svg">
+              <p class="finance-block-subtitle">Гарантия безопасной сделки для каждого клиента</p>
+            </div>
+
+            <div class="block-item_wrapper">
+              <img class="block-item_icon" width="24" height="24" src="img/icons/check-circle.svg">
+              <p class="finance-block-subtitle">Более 100 активных инвесторов, желающих быстро купить ваш объект</p>
+            </div>
+
+          </div>
+          <a class="main-finance_button" href="sale.html">Получить консультацию</a>
+        </div>
+
+        <div class="notary-block">
+          <h3 class="notary-block-title">Займы под залог<br>недвижимости</h3>
+          <div class="finance-block-text_wrapper">
+
+            <div class="block-item_wrapper">
+              <img class="block-item_icon" width="24" height="24" src="img/icons/check-circle.svg">
+              <p class="notary-block-subtitle">Возможность заложить недвижимость с получением до 70% от рыночной<br class="notary-br"> цены</p>
+            </div>
+
+            <div class="block-item_wrapper">
+              <img class="block-item_icon" width="24" height="24" src="img/icons/check-circle.svg">
+              <p class="notary-block-subtitle">С правом досрочного погашения – полностью или частично – в любое<br class="notary-br"> время</p>
+            </div>
+
+            <div class="block-item_wrapper">
+              <img class="block-item_icon" width="24" height="24" src="img/icons/check-circle.svg">
+              <p class="notary-block-subtitle">Нотариальное оформление сделки</p>
+            </div>
+
+          </div>
+          <a class="main-notary_button" href="sale.html">Получить консультацию</a>
+        </div>
+
+      </section>
+
+      <section class="main-clients">
+        <h2 class="main-clients_title">Наши клиенты</h2>
+        <div class="main-clients_wrapper">
+
+          <div class="main-clients_block">
+            <img class="main-clients_img" src="img/main/xlebnik.png" alt="">
+          </div>
+
+          <div class="main-clients_block">
+            <img class="main-clients_img" src="img/main/ozon.png" alt="">
+          </div>
+
+          <div class="main-clients_block">
+            <img class="main-clients_img" src="img/main/dodo.png" alt="">
+          </div>
+
+          <div class="main-clients_block">
+            <img class="main-clients_img" src="img/main/wildberries.png" alt="">
+          </div>
+
+          <div class="main-clients_block">
+            <img class="main-clients_img" src="img/main/zolotoy.png" alt="">
+          </div>
+
+          <div class="main-clients_block">
+            <img class="main-clients_img" src="img/main/psb.png" alt="">
+          </div>
+
+          <div class="main-clients_block">
+            <img class="main-clients_img" src="img/main/lenta.png" alt="">
+          </div>
+
+          <div class="main-clients_block">
+            <img class="main-clients_img" src="img/main/five.png" alt="">
+          </div>
+
+          <div class="main-clients_block">
+            <img class="main-clients_img" src="img/main/magnit.png" alt="">
+          </div>
+
+          <div class="main-clients_block">
+            <div class="block-text_wrapper">
+              <p class="block-title">+1000</p>
+              <p class="block-subtitle">клиентов<br>в активном поиске</p>
+            </div>
+          </div>
+
+          <div class="main-clients_block-arendator">
+              <p class="block-arendator-title">Хотите себе такого арендатора?</p>
+              <p class="block-arendator-subtitle">Свяжитесь с нами для получения бесплатной консультации</p>
+              <div class="block-buttons_wrapper">
+                <a class="main-main_button main-main_button-arendator" href="tel:+78129324747">Позвонить</a>
+                <a class="main-main_button main-main_button-arendator" href="https://api.whatsapp.com/send/?phone=79052673439">Написать в WhatsApp</a>
+              </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="main-proposals">
+        <h2 class="main-proposals_title">Следить за интересными предложениями</h2>
+        <div class="main-proposals_wrapper">
+
+          <div class="main-proposals_block">
+            <img class="main-proposals_img" src="img/main/main-avito-logo.png" alt="">
+            <div class="block-text_wrapper">
+              <p class="proposals-block-title">Авито</p>
+              <p class="proposals-block-subtitle">Подпишитесь на нас<br>на Авито</p>
+            </div>
+          </div>
+
+          <div class="main-proposals_block">
+            <img class="main-proposals_img" src="img/main/main-invest-logo.png" alt="">
+            <div class="block-text_wrapper">
+              <p class="proposals-block-title">Для инвесторов</p>
+              <p class="proposals-block-subtitle">Телеграм канал с новыми<br>предложениями для инвесторов</p>
+            </div>
+          </div>
+
+          <div class="main-proposals_block">
+            <img class="main-proposals_img" src="img/main/main-rest-logo.png" alt="">
+            <div class="block-text_wrapper">
+              <p class="proposals-block-title">Для рестораторов</p>
+              <p class="proposals-block-subtitle">Телеграм канал с помещениями<br>под ресторанный бизнес</p>
+            </div>
+          </div>
+
+          <div class="main-proposals_block">
+            <img class="main-proposals_img" src="img/main/main-whatsapp-logo.png" alt="">
+            <div class="block-text_wrapper">
+              <p class="proposals-block-title">WhatsApp</p>
+              <p class="proposals-block-subtitle">Любые вопросы в WhatsApp<br>или по телефону
+                <a href="tel:+79045673912" class="proposals-block-phone">+7 904 567 39 12</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="main-projects">
+        <h2 class="main-proposals_title">Наши проекты</h2>
+        <div class="main-projects_wrapper">
+
+          <div class="main-proposals_block">
+            <a class="footer_crm-link" href="https://restojob.ru/">
+              <img class="main-projects_img-rest" src="img/main/main-restojob-logo.svg" alt="">
+            </a>
+            <div class="block-text_wrapper">
+              <p class="proposals-block-subtitle">Сервис для поиска персонала<br>в ресторанной индустрии</p>
+            </div>
+          </div>
+
+          <div class="main-proposals_block">
+            <a class="footer_crm-link" href="https://app.worldcafe.ru/">
+              <img class="main-projects_img-net" src="img/main/main-netwings-logo.png" alt="">
+            </a>
+            <div class="block-text_wrapper">
+              <p class="proposals-block-subtitle">CRM для работы с комерческой<br>недвижимостью</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="main-map">
+        <h2 class="main-map_title">Посетите наш офис</h2>
+        <div class="favourites-map" id="map">
+        </div>
+      </section>
+
       <footer class="footer">
         <div class="footer_container">
-          <a>
-            <img class="header_logo header_logo--footer" src="img/logo.png" id="header-logo" alt="Логотип RBM GROUP">
-          </a>
           <div class="footer_wrapper">
             <div class="footer_logo">
+              <a href="index.html">
+                <img class="header_logo header_logo--footer" src="img/logo.png" id="header-logo" alt="Логотип RBM GROUP">
+              </a>
+              <p class="footer_logo-title footer_logo-title--address">г. Санкт-Петербург, Греческий пр, 29</p>
+            </div>
+            <div class="footer_logo-mobile">
+              <a href="index.html">
+                <img class="header_logo header_logo--footer" src="img/logo.png" id="header-logo" alt="Логотип RBM GROUP">
+              </a>
               <p class="footer_logo-title footer_logo-title--address">г. Санкт-Петербург, Греческий пр, 29</p>
               <a href="tel:+78129324747" class="footer_logo-phone">+7(812)932-47-47</a>
               <a class="footer_logo-title footer_logo-title--recall">Заказать звонок</a>
             </div>
-            <div class="footer_vacancy">
-              <a class="footer_vacancy-link">Вакансии</a>
-              <a class="footer_vacancy-link">Парнерам</a>
-              <a class="footer_vacancy-link">Наши клиенты</a>
+            <div class="footer-link_wrapper">
+              <div class="footer_vacancy">
+                <a class="footer_vacancy-link">О компании</a>
+                <a class="footer_vacancy-link">Вакансии</a>
+                <a class="footer_vacancy-link">Контакты</a>
+              </div>
+              <div class="footer_vacancy">
+                <a class="footer_vacancy-link" href="sale.html">Купить помещение</a>
+                <a class="footer_vacancy-link" href="rent.html">Арендовать помещение</a>
+                <a class="footer_vacancy-link" href="bsale.html">Купить готовый бизнес</a>
+              </div>
             </div>
-            <ul class="footer_links">
-              <li class="footer-link">
-                Аренда помещения под ресторан в Санкт-Петербурге
-              </li>
-              <li class="footer-link">
-                Аренда под салон красоты в Санкт-Петербурге
-              </li>
-              <li class="footer-link">
-                Аренда помещения под медицинский центр в Санкт-Петербурге
-              </li>
-              <li class="footer-link">
-                Аренда под магазин в Санкт-Петербурге
-              </li>
-              <li class="footer-link">
-                Покупка коммерческой недвижимости в Санкт-Петербурге
-              </li>
-              <li class="footer-link">
-                Купить готовый бизнес в Санкт-Петербурге
-              </li>
-            </ul>
-            <div class="footer_crm">
-              <a class="footer_crm-link" href="https://app.worldcafe.ru/">
-                <span class="footer_crm-title">CRM</span>
-                <img class="footer_crm-logo" src="img/icons/netwings.svg" width="85px" height="22px" alt="Логотип Netwings">
-              </a>
-              <p class="footer_crm-subtitle">для работы с коммерческой недвижимостью</p>
+            <div class="footer-contacts">
+              <a href="tel:+78129324747" class="footer_logo-phone">+7(812)932-47-47</a>
+              <a class="footer_logo-title footer_logo-title--recall">Заказать звонок</a>
+              <div class="footer_social">
+                <a href="https://t.me/share/url?url=@spbrbm" class="footer_social-tg">
+                  <img src="img/icons/tg.svg" class="tg_img" alt="Телеграмм">
+                </a>
+                <a href="https://vk.com/rbmgroup" class="footer_social-vk">
+                  <img src="img/icons/vk.svg" class="vk_img" alt="ВКонтакте">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=79052673439" class="footer_social-wa">
+                  <img src="img/icons/wa.svg" class="wa_img" alt="WhatsApp">
+                </a>
+              </div>
             </div>
-            <div></div>
-            <div class="footer_social">
-              <a href="https://t.me/share/url?url=@spbrbm" class="footer_social-tg">
-                <img src="img/icons/tg.svg" class="tg_img" alt="Телеграмм">
-              </a>
-              <a href="https://vk.com/rbmgroup" class="footer_social-vk">
-                <img src="img/icons/vk.svg" class="vk_img" alt="ВКонтакте">
-              </a>
-              <a href="https://api.whatsapp.com/send/?phone=79052673439" class="footer_social-wa">
-                <img src="img/icons/wa.svg" class="wa_img" alt="WhatsApp">
-              </a>
+            <div class="footer-contacts-mobile">
+              <div class="footer_social">
+                <a href="https://t.me/share/url?url=@spbrbm" class="footer_social-tg">
+                  <img src="img/icons/tg.svg" class="tg_img" alt="Телеграмм">
+                </a>
+                <a href="https://vk.com/rbmgroup" class="footer_social-vk">
+                  <img src="img/icons/vk.svg" class="vk_img" alt="ВКонтакте">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=79052673439" class="footer_social-wa">
+                  <img src="img/icons/wa.svg" class="wa_img" alt="WhatsApp">
+                </a>
+              </div>
             </div>
           </div>
           <div class="footer_line"></div>
@@ -523,17 +508,17 @@
 
     <!-- Маркер на карту-->
     <template id="marker-template">
-      <div class="marker">
-        <p>400 000 000 ₽</p>
-        <div class="balloon">
+      <div class="">
+        <img class="main-marker-img" src="./img/main/marker.png">
+        <div class="balloon balloon--main">
           <img class="balloon-img" src="./img/Card1-desktop.jpg">
-          <p class="balloon-title">Помещение 120 м2</p>
-          <p class="balloon-address">Матросова 66А</p>
-          <p class="ballon-price">400 000 000 ₽</p>
+          <p class="ballon-price ballon-price--main">г. Санкт-Петербург,</p>
+          <p class="ballon-price ballon-price--main">Греческий пр.29</p>
+          <p class="balloon-title main-balloon-title">Телефон: +7(812)932-47-47</p>
         </div>
       </div>
     </template>
 
   </body>
-  <script src="js/sale.js" type="module" defer></script>
+  <script src="js/main.js" type="module" defer></script>
 </html>
