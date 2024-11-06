@@ -1,5 +1,6 @@
 import {header} from './header.js';
 import {footer} from './footer.js';
+import {modal} from './modal.js';
 import {sliderInit} from './slider.js'
 import {initMap, createMarkerList, deleteMarkerList, markerList} from './map.js';
 
@@ -144,10 +145,10 @@ let loadMap = false;
 [...cards].forEach(card => {
   const slider = card.querySelector('.card_wrapper');
   sliderInit(slider, card, 5);
-  markFavotites(card);
+  markFavorites(card);
 });
 
-function markFavotites(card) {
+function markFavorites(card) {
   let watchList = JSON.parse(localStorage.getItem('favorites'));
   const objectNumber = card.querySelector(".stickers_item");
   const objectHeart = card.querySelector(".stickers-icon");
@@ -164,9 +165,20 @@ function markFavotites(card) {
 
 initMap().then(map => {
   loadMap = true;
-  if([...cards].length && !markerList.length) {
+  let cardsCoords =[];
+  let data;
+
+  [...cards].forEach(card => {
+    data = {
+      lon: 30.28 + Math.random() / 10,
+      lat: 59.88 + Math.random() / 10,
+    }
+    cardsCoords.push(data)
+  });
+
+  if(cardsCoords.length && !markerList.length) {
     deleteMarkerList(map);
-    createMarkerList([...cards], map);
+    createMarkerList(cardsCoords, map);
   }
 });
 
@@ -200,3 +212,4 @@ bSaleMobile.addEventListener('click', (ev) => {
 
 header();
 footer();
+modal();

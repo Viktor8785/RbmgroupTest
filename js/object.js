@@ -1,7 +1,7 @@
 import {header, checkFavorites} from './header.js';
 import {footer} from './footer.js';
+import {modal} from './modal.js';
 import {initMap, createMarkerList, deleteMarkerList, changeCenter, ZOOM} from './map.js';
-//import IMask from 'imask';
 
 const formRecall = document.querySelector(".object-sale_recall");
 const pictureContainer = document.querySelector(".object-sale_picture-container");
@@ -230,3 +230,4 @@ phoneMask.on('accept', () => {
 
 header();
 footer();
+modal();

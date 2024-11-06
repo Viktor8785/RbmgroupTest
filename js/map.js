@@ -48,11 +48,7 @@ function createMarker(object) {
       balloonElement.classList.remove('balloon--open');
     }
   })
-  const data = {
-    lon: 30.28 + Math.random() / 10,
-    lat: 59.88 + Math.random() / 10,
-  }
-  const marker = new YMapMarker({coordinates: [data.lon, data.lat]}, markerElement);
+  const marker = new YMapMarker({coordinates: [object.lon, object.lat]}, markerElement);
   return marker;
 }
 

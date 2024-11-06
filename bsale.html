@@ -34,7 +34,7 @@
               </form>
               <div class="item-wrapper">
                 <a class="header_nav-item" href="rent.html">Аренда</a>
-                <a class="header_nav-item" href="index.html">Покупка (инвестиции)</a>
+                <a class="header_nav-item" href="sale.html">Покупка (инвестиции)</a>
                 <a class="header_nav-item header_nav-item--active">Готовый бизнес</a>
               </div>
               <div class="header_nav-phone">
@@ -447,6 +447,7 @@
         <div class="rent_catalog-map" id="map">
         </div>
       </section>
+
       <footer class="footer">
         <div class="footer_container">
           <div class="footer_wrapper">
@@ -457,12 +458,12 @@
               <p class="footer_logo-title footer_logo-title--address">г. Санкт-Петербург, Греческий пр, 29</p>
             </div>
             <div class="footer_logo-mobile">
-              <a>
+              <a href="index.html">
                 <img class="header_logo header_logo--footer" src="img/logo.png" id="header-logo" alt="Логотип RBM GROUP">
               </a>
               <p class="footer_logo-title footer_logo-title--address">г. Санкт-Петербург, Греческий пр, 29</p>
               <a href="tel:+78129324747" class="footer_logo-phone">+7(812)932-47-47</a>
-              <a class="footer_logo-title footer_logo-title--recall">Заказать звонок</a>
+              <a  id="footer-recall-mobile" class="footer_logo-title footer_logo-title--recall" id="footer-call">Заказать звонок</a>
             </div>
             <div class="footer-link_wrapper">
               <div class="footer_vacancy">
@@ -478,7 +479,7 @@
             </div>
             <div class="footer-contacts">
               <a href="tel:+78129324747" class="footer_logo-phone">+7(812)932-47-47</a>
-              <a class="footer_logo-title footer_logo-title--recall">Заказать звонок</a>
+              <a id="footer-recall" class="footer_logo-title footer_logo-title--recall">Заказать звонок</a>
               <div class="footer_social">
                 <a href="https://t.me/share/url?url=@spbrbm" class="footer_social-tg">
                   <img src="img/icons/tg.svg" class="tg_img" alt="Телеграмм">
@@ -509,6 +510,28 @@
           <p class="footer_copy">© RBM 2010</p>
         </div>
       </footer>
+
+      <!-- Заказать звонок -->
+      <section class="modal-call">
+        <form class="modal-call_wrapper">
+          <div class="modal-call_title-wrapper">
+            <h1 class="modal-call_title">Заказать звонок</h1>
+            <img class="modal-call_close" src="img/icons/exit.svg" id="modal-close" alt="">
+          </div>
+          <div class="modal-call_container">
+            <div class="modal-call_input-wrapper">
+              <input type="text" class="modal-call_input" placeholder="Телефон" id="call-input-phone" name="call-input-phone">
+              <input type="text" class="modal-call_input" placeholder="Имя" id="call-input-name" name="call-input-name">
+            </div>
+            <textarea class="modal-call_text" placeholder="Комментарий" id="call-text" name="call-text"></textarea>
+            <button class="main-main_button main-main_button--call" id="button-phone">Заказать звонок</button>
+            <a class="main-main_button main-main_button--whatsapp"
+             href="https://api.whatsapp.com/send/?phone=79052673439"
+             id="button-whatsapp">Написать в WhatsApp</a>
+          </div>
+        </form>
+      </section>
+
     </div>
 
     <!-- Маркер на карту-->
@@ -525,5 +548,6 @@
     </template>
 
   </body>
+  <script src="https://unpkg.com/imask"></script>
   <script src="js/bsale.js" type="module" defer></script>
 </html>

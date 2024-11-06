@@ -1,5 +1,6 @@
 import {header} from './header.js';
 import {footer} from './footer.js';
+import {modal} from './modal.js';
 import {sliderInit} from './slider.js';
 import {initMap, createMarkerList, deleteMarkerList, markerList} from './map.js';
 
@@ -45,13 +46,23 @@ let loadMap = false;
 
 initMap().then(map => {
   loadMap = true;
-  if([...cards].length && !markerList.length) {
-    deleteMarkerList(map);
-    if(watchList && watchList.length) {
-      createMarkerList([...cards], map);
+  let cardsCoords =[];
+  let data;
+
+  [...cards].forEach(card => {
+    data = {
+      lon: 30.28 + Math.random() / 10,
+      lat: 59.88 + Math.random() / 10,
     }
+    cardsCoords.push(data)
+  });
+
+  if(cardsCoords.length && !markerList.length) {
+    deleteMarkerList(map);
+    createMarkerList(cardsCoords, map);
   }
 });
 
 header();
 footer();
+modal();

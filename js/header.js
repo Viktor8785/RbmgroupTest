@@ -15,6 +15,7 @@ const headerPhone = document.querySelector("#header-phone");
 const headerRecall = document.querySelector("#header-recall");
 const headerForm = document.querySelector("#header-form");
 const headerFormDesc = document.querySelector("#header-form-desc");
+const modal = document.querySelector(".modal-call");
 const mediaQueryDesktopSmall = window.matchMedia('(min-width: 1440px)');
 
 mediaQueryDesktopSmall.addEventListener('change', handleWidthChangeDesktopSmall);
@@ -31,6 +32,7 @@ function handleWidthChangeDesktopSmall(e) {
 };
 
 export function header() {
+
   headerForm.addEventListener('submit', (evt) => {
     evt.preventDefault();
   });
@@ -70,6 +72,9 @@ export function header() {
     if(headerMenu.classList.contains("header_menu--opened")) {
       headerMenuClose();
     }
+    if(modal) {
+      modal.classList.add('modal-call--active');
+    }
   });
 
   headerSearch.addEventListener('click', (ev) => {
@@ -88,16 +93,16 @@ export function header() {
 
   function headerMenuClose() {
     headerMenu.classList.remove("header_menu--opened");
-      headerNav.classList.remove("header_nav--opened");
-      headerNavWrapper.classList.remove("header_nav-wrapper--opened");
-      headerSearch.classList.remove("header_search--opened");
-      headerSearch.classList.remove("header_search--active");
-      headerSearchBlue.classList.remove("header_search-blue--opened");
-      if(headerHeart) {
-        headerHeart.classList.remove("header_heart--opened");
-      }
-      headerLogo.classList.remove("header_logo--opened");
-      headerClose.classList.remove("header_close--opened");
+    headerNav.classList.remove("header_nav--opened");
+    headerNavWrapper.classList.remove("header_nav-wrapper--opened");
+    headerSearch.classList.remove("header_search--opened");
+    headerSearch.classList.remove("header_search--active");
+    headerSearchBlue.classList.remove("header_search-blue--opened");
+    if(headerHeart) {
+      headerHeart.classList.remove("header_heart--opened");
+    }
+    headerLogo.classList.remove("header_logo--opened");
+    headerClose.classList.remove("header_close--opened");
   }
 
 }
